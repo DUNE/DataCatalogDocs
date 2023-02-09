@@ -28,9 +28,5 @@ Contents
     sam2metacat
     metadatameaning
     template
-    usage
-    tests
-    Modules
-    api
     related
     Notes
