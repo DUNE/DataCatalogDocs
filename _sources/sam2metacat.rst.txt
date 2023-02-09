@@ -45,7 +45,8 @@ Then authenticate to metacat:
 
 .. code-block:: bash
 
-  export X509_USER_PROXY=/tmp/x509up_u1327
+  kx509
+  export X509_USER_PROXY=/tmp/x509up_u$(id -u)
   export X509_USER_KEY=$X509_USER_PROXY
   metacat auth login -m x509 $USER
 
