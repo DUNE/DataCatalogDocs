@@ -78,6 +78,21 @@ Expires:<span class="w"> </span>Thu<span class="w"> </span>Oct<span class="w"> <
 metacat<span class="w"> </span>auth<span class="w"> </span>login<span class="w"> </span>-m<span class="w"> </span>x509<span class="w"> </span><span class="nv">$USER</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are not at Fermilab you may need to add your local credentials to the list of DN’s</p>
+<p>do This</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>metacat<span class="w"> </span>auth<span class="w"> </span>mydn
+<span class="nv">CN</span><span class="o">=</span><span class="m">1747757498</span>,CN<span class="o">=</span><span class="m">551566791</span>,CN<span class="o">=</span>Heidi<span class="w"> </span>Marie<span class="w"> </span>Schellman,CN<span class="o">=</span><span class="m">514437</span>,CN<span class="o">=</span>hschellm,OU<span class="o">=</span>Users,OU<span class="o">=</span>Organic<span class="w"> </span>Units,DC<span class="o">=</span>cern,DC<span class="o">=</span>ch
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Log in to MetaCat GUI using services password</p></li>
+<li><p>Go to your user profile <a class="reference external" href="https://metacat.fnal.gov:9443/dune_meta_demo/app/gui/user">https://metacat.fnal.gov:9443/dune_meta_demo/app/gui/user</a>?username=&lt;yourFNALusername&gt;</p></li>
+<li><p>Copy-paste the output from “metacat auth mydn” into blank text box in front of Add button</p></li>
+<li><p>Click Add</p></li>
+</ol>
+</div>
 </div>
 <div class="section" id="example-get-the-raw-data-from-given-protodune-sp-detector-runs">
 <h2>Example: Get the raw data from given protodune-sp detector runs<a class="headerlink" href="#example-get-the-raw-data-from-given-protodune-sp-detector-runs" title="Permalink to this heading">¶</a></h2>
