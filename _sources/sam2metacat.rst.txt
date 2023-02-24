@@ -34,6 +34,8 @@ Make certain you can point to the metacat server:
 
 Then authenticate to metacat:
 
+
+
 .. code-block:: bash
 
   metacat auth login -m password $USER
@@ -52,20 +54,25 @@ Then authenticate to metacat:
 
 .. note::
 
-  If you are not at Fermilab you may need to add your local credentials to the list of DN's
+  If you are not on a Fermilab machine you may need to add your local credentials to the list of DN's and explicitly tell metacat your FNAL user id.
 
-  do This
+  do this
 
   .. code-block:: bash
 
     metacat auth mydn
-    CN=1747757498,CN=551566791,CN=Heidi Marie Schellman,CN=514437,CN=hschellm,OU=Users,OU=Organic Units,DC=cern,DC=ch
+
 
   1. Log in to MetaCat GUI using services password
   2. Go to your user profile https://metacat.fnal.gov:9443/dune_meta_demo/app/gui/user?username=<yourFNALusername>
   3. Copy-paste the output from "metacat auth mydn" into blank text box in front of Add button
   4. Click Add
 
+  then
+
+  .. code-block:: bash
+
+    metacat auth login -m x509 <yourFNALusername>
 
 
 Example: Get the raw data from given protodune-sp detector runs

@@ -80,10 +80,9 @@ metacat<span class="w"> </span>auth<span class="w"> </span>login<span class="w">
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you are not at Fermilab you may need to add your local credentials to the list of DN’s</p>
-<p>do This</p>
+<p>If you are not on a Fermilab machine you may need to add your local credentials to the list of DN’s and explicitly tell metacat your FNAL user id.</p>
+<p>do this</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>metacat<span class="w"> </span>auth<span class="w"> </span>mydn
-<span class="nv">CN</span><span class="o">=</span><span class="m">1747757498</span>,CN<span class="o">=</span><span class="m">551566791</span>,CN<span class="o">=</span>Heidi<span class="w"> </span>Marie<span class="w"> </span>Schellman,CN<span class="o">=</span><span class="m">514437</span>,CN<span class="o">=</span>hschellm,OU<span class="o">=</span>Users,OU<span class="o">=</span>Organic<span class="w"> </span>Units,DC<span class="o">=</span>cern,DC<span class="o">=</span>ch
 </pre></div>
 </div>
 <ol class="arabic simple">
@@ -92,6 +91,10 @@ metacat<span class="w"> </span>auth<span class="w"> </span>login<span class="w">
 <li><p>Copy-paste the output from “metacat auth mydn” into blank text box in front of Add button</p></li>
 <li><p>Click Add</p></li>
 </ol>
+<p>then</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>metacat<span class="w"> </span>auth<span class="w"> </span>login<span class="w"> </span>-m<span class="w"> </span>x509<span class="w"> </span>&lt;yourFNALusername&gt;
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="example-get-the-raw-data-from-given-protodune-sp-detector-runs">
