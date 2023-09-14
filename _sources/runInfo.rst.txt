@@ -8,11 +8,12 @@ This is data found in the file data for protoDUNE run 1 that would be good candi
 .. code-block:: javascript
 
     {
-      "file_type": "detector",
-      "run_type":"protodune-sp",
-      "event_count": 136,
-      "first_event": 24406,
-      "last_event": 26038,
+      "run_number":XXXX,  # key
+      "file_type": "detector", # key
+      "run_type":"protodune-sp", # key
+      "event_count": 136,  # get from RC - total events from run
+      "first_event": 24406,  # do we need this
+      "last_event": 26038,  # do we need this
       "start_time": "2018-10-17T19:45:47+00:00",
       "end_time": "2018-10-17T19:56:50+00:00",
       "purpose": ???
