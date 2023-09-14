@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template for minimal metadata for a Monte Carlo file &#8212; DataCatalogDocs 0.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Information that should probably go into a runs database" href="runInfo.html" />
+    <link rel="prev" title="Template for minimal metadata for a file" href="template.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="runInfo.html" title="Information that should probably go into a runs database"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="template.html" title="Template for minimal metadata for a file"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">DataCatalogDocs 0.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template for minimal metadata for a Monte Carlo file</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="template-for-minimal-metadata-for-a-monte-carlo-file">
+<h1>Template for minimal metadata for a Monte Carlo file<a class="headerlink" href="#template-for-minimal-metadata-for-a-monte-carlo-file" title="Permalink to this heading">¶</a></h1>
+<p>Here is an example of minimal metadata for a raw data file.</p>
+<p>You can add additional information to the metadata object.</p>
+<div class="section" id="metacat-version">
+<h2>Metacat version<a class="headerlink" href="#metacat-version" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w"> </span><span class="s2">&quot;checksums&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="s2">&quot;adler32&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;c27f09b5&quot;</span>
+<span class="w">     </span><span class="p">},</span>
+<span class="w"> </span><span class="s2">&quot;created_timestamp&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1691937037.698784</span><span class="p">,</span>
+<span class="w"> </span><span class="s2">&quot;creator&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dunepro&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="s2">&quot;fid&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;0eUkJLB3SQOmlA9N&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="s2">&quot;metadata&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="s2">&quot;art.file_format_era&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ART_2011a&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;art.file_format_version&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;art.first_event&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">9301</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;art.last_event&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">9400</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;art.process_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Reco1&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;art.run_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fardet-vd&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;core.application&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;art.reco&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;core.application.family&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;art&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;core.application.name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;reco&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;core.application.version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;v09_75_03d00&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;core.data_stream&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;out1&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;core.data_tier&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;hit-reconstructed&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;core.end_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1691937015.0</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;core.event_count&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;core.file_format&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;artroot&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;core.file_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mc&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;core.first_event_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">9301</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;core.last_event_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">9400</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;core.run_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fardet-vd&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;core.runs&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">         </span><span class="mf">27279</span>
+<span class="w">     </span><span class="p">],</span>
+<span class="w">     </span><span class="s2">&quot;core.runs_subruns&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">         </span><span class="mf">2727900001</span>
+<span class="w">     </span><span class="p">],</span>
+<span class="w">     </span><span class="s2">&quot;core.start_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1691936982.0</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;dune.campaign&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fd_mc_2023a&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;dune.requestid&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ritm1780305&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;dune.workflow&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="s2">&quot;cpuinfo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;AMD EPYC 7551P 32-Core Processor&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;hostname&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;hd80.dice.priv&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;job_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;27279.93@justin-prod-sched01.dune.hep.ac.uk&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;jobscript_cpu_seconds&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">37173</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;jobscript_finish&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1691937022</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;jobscript_real_seconds&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">37212</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;jobscript_start&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1691899809</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;os_release&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Scientific Linux release 7.9 (Nitrogen)&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;request_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1019</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;site_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;UK_Bristol&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;stage_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;user&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;amcnab@fnal.gov&quot;</span>
+<span class="w">     </span><span class="p">},</span>
+<span class="w">     </span><span class="s2">&quot;dune_mc.beam_flux_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;dune_mc.beam_polarity&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rhc&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;dune_mc.detector_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fardet-vd&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;dune_mc.electron_lifetime&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;10.4&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;dune_mc.gen_fcl_filename&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;prodgenie_anu_numu2nutau_nue2numu_dunevd10kt_1x8x6_3view_30deg.fcl&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;dune_mc.generators&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;genie&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;dune_mc.generators_version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;3.04_00c&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;dune_mc.geometry_version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dunevd10kt_3view_30deg_v3_refactored_1x8x6ref.gdml&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;dune_mc.liquid_flow&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;no&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;dune_mc.mixerconfig&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;numu2nutau_nue2numu&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;dune_mc.space_charge&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;no&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;dune_mc.with_cosmics&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
+<span class="w"> </span><span class="p">},</span>
+<span class="w"> </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;anu_numu2nutau_nue2numu_dunevd10kt_1x8x6_3view_30deg_27279_93_20230813T041011Z_gen_g4_detsim_hitreco.root&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="s2">&quot;namespace&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fardet-vd&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="s2">&quot;retired&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w"> </span><span class="s2">&quot;retired_by&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w"> </span><span class="s2">&quot;retired_timestamp&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w"> </span><span class="s2">&quot;size&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1495285749</span><span class="p">,</span>
+<span class="w"> </span><span class="s2">&quot;updated_by&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w"> </span><span class="s2">&quot;updated_timestamp&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1691937037.698784</span>
+<span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="samweb-version">
+<h2>samweb version<a class="headerlink" href="#samweb-version" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;file_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;anu_numu2nutau_nue2numu_dunevd10kt_1x8x6_3view_30deg_27279_93_20230813T041011Z_gen_g4_detsim_hitreco.root&quot;</span><span class="p">,</span>
+<span class="s2">&quot;file_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">80035348</span><span class="p">,</span>
+<span class="s2">&quot;create_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2023-08-14T12:26:26+00:00&quot;</span><span class="p">,</span>
+<span class="s2">&quot;user&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dunepro&quot;</span><span class="p">,</span>
+<span class="s2">&quot;file_size&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1495285749</span><span class="p">,</span>
+<span class="s2">&quot;checksum&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="s2">&quot;adler32:c27f09b5&quot;</span>
+<span class="p">],</span>
+<span class="s2">&quot;content_status&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;good&quot;</span><span class="p">,</span>
+<span class="s2">&quot;file_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mc&quot;</span><span class="p">,</span>
+<span class="s2">&quot;file_format&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;artroot&quot;</span><span class="p">,</span>
+<span class="s2">&quot;group&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dune&quot;</span><span class="p">,</span>
+<span class="s2">&quot;data_tier&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;hit-reconstructed&quot;</span><span class="p">,</span>
+<span class="s2">&quot;application&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="s2">&quot;family&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;art&quot;</span><span class="p">,</span>
+<span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;reco&quot;</span><span class="p">,</span>
+<span class="s2">&quot;version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;v09_75_03d00&quot;</span>
+<span class="p">},</span>
+<span class="s2">&quot;event_count&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span>
+<span class="s2">&quot;first_event&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">9301</span><span class="p">,</span>
+<span class="s2">&quot;last_event&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">9400</span><span class="p">,</span>
+<span class="s2">&quot;start_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2023-08-13T14:29:42+00:00&quot;</span><span class="p">,</span>
+<span class="s2">&quot;end_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2023-08-13T14:30:15+00:00&quot;</span><span class="p">,</span>
+<span class="s2">&quot;data_stream&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;out1&quot;</span><span class="p">,</span>
+<span class="s2">&quot;DUNE.campaign&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fd_mc_2023a&quot;</span><span class="p">,</span>
+<span class="s2">&quot;DUNE.requestid&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ritm1780305&quot;</span><span class="p">,</span>
+<span class="s2">&quot;DUNE_MC.beam_flux_ID&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="s2">&quot;DUNE_MC.beam_polarity&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rhc&quot;</span><span class="p">,</span>
+<span class="s2">&quot;DUNE_MC.detector_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fardet-vd&quot;</span><span class="p">,</span>
+<span class="s2">&quot;DUNE_MC.electron_lifetime&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;10.4&quot;</span><span class="p">,</span>
+<span class="s2">&quot;DUNE_MC.gen_fcl_filename&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;prodgenie_anu_numu2nutau_nue2numu_dunevd10kt_1x8x6_3view_30deg.fcl&quot;</span><span class="p">,</span>
+<span class="s2">&quot;DUNE_MC.generators&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;genie&quot;</span><span class="p">,</span>
+<span class="s2">&quot;DUNE_MC.generators_version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;3.04_00c&quot;</span><span class="p">,</span>
+<span class="s2">&quot;DUNE_MC.geometry_version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dunevd10kt_3view_30deg_v3_refactored_1x8x6ref.gdml&quot;</span><span class="p">,</span>
+<span class="s2">&quot;DUNE_MC.liquid_flow&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;no&quot;</span><span class="p">,</span>
+<span class="s2">&quot;DUNE_MC.mixerconfig&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;numu2nutau_nue2numu&quot;</span><span class="p">,</span>
+<span class="s2">&quot;DUNE_MC.space_charge&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;no&quot;</span><span class="p">,</span>
+<span class="s2">&quot;DUNE_MC.with_cosmics&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="s2">&quot;runs&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="p">[</span>
+<span class="mf">27279</span><span class="p">,</span>
+<span class="mf">1</span><span class="p">,</span>
+<span class="s2">&quot;fardet-vd&quot;</span>
+<span class="p">]</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Template for minimal metadata for a Monte Carlo file</a><ul>
+<li><a class="reference internal" href="#metacat-version">Metacat version</a></li>
+<li><a class="reference internal" href="#samweb-version">samweb version</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="template.html"
+                          title="previous chapter">Template for minimal metadata for a file</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="runInfo.html"
+                          title="next chapter">Information that should probably go into a runs database</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/mctemplate.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="runInfo.html" title="Information that should probably go into a runs database"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="template.html" title="Template for minimal metadata for a file"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">DataCatalogDocs 0.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Template for minimal metadata for a Monte Carlo file</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Fermi National Accelerator Laboratory.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+  </body>
+</html>

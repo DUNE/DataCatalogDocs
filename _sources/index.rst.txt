@@ -28,6 +28,7 @@ Contents
     sam2metacat
     metadatameaning
     template
+    mctemplate
     runInfo
     OlderSam
     related
