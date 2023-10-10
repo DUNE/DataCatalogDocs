@@ -42,3 +42,16 @@ The github actions had some issues:
       autodoc_mock_imports = ["metacat","samweb_client","data_dispatcher"]
 
     to the `conf.py`  to avoid errors due to imports of external code.  I just got blanks otherwise.
+
+Google indexing Notes
+*********************
+
+# Go to `Google Search Console <https://search.google.com/search-console/welcome?hl=en&utm_source=wmx&utm_medium=deprecation-pane&utm_content=home>`_
+
+# choose  URL prefix and enter your top level URL you will get back a 
+
+# I github added build/html (just the directories) to github to be in the same directory as `index.html` and then placed the key file I got from google in that directory.  
+
+# I then added that file to github, committed and pushed.  
+
+# Once the action to build the docs go to the search console again and go to URL inspection.  You should be able to check that the URL exists and request indexing. 
