@@ -8,5 +8,3 @@ DUNE is transitioning away from using `samweb` to a system based on `metacat` an
 
 We provide example code for the transition
 
-Older sam documentation
------------------------

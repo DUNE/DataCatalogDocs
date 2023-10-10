@@ -5,7 +5,7 @@ February 27, 2023 HMS
 
 This is data found in the file data for protoDUNE run 1 that would be good candidates to go into a runs condition database for Run II
 
-.. code-block:: javascript
+.. code-block:: json
 
     {
       "run_number":XXXX,  # key
