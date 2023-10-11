@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reconstructed File Example &#8212; DataCatalogDocs 0.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="canonical" href="https://dune.github.io/DataCatalogDocs/reco.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Template for minimal metadata for a Monte Carlo file" href="mctemplate.html" />
+    <link rel="prev" title="Template for minimal metadata for a file" href="template.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mctemplate.html" title="Template for minimal metadata for a Monte Carlo file"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="template.html" title="Template for minimal metadata for a file"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">DataCatalogDocs 0.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Reconstructed File Example</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="reconstructed-file-example">
+<h1>Reconstructed File Example<a class="headerlink" href="#reconstructed-file-example" title="Permalink to this heading">¶</a></h1>
+<div class="section" id="metacat">
+<h2>metacat<a class="headerlink" href="#metacat" title="Permalink to this heading">¶</a></h2>
+<p><cite>metacat file show -m -j pdsp_det_reco:np04_raw_run005141_0002_dl2_reco1_18126921_0_20210318T103516Z.root</cite></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;checksums&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;adler32&quot;</span><span class="p">:</span> <span class="s2">&quot;03d6cb63&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;enstore&quot;</span><span class="p">:</span> <span class="s2">&quot;1952172898&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;md5&quot;</span><span class="p">:</span> <span class="s2">&quot;9c9d59cc33f3b0e2167c2acb3228241e&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;created_timestamp&quot;</span><span class="p">:</span> <span class="mf">1616170094.9023</span><span class="p">,</span>
+    <span class="s2">&quot;creator&quot;</span><span class="p">:</span> <span class="s2">&quot;dunepro&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fid&quot;</span><span class="p">:</span> <span class="s2">&quot;52500057&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;art.file_format_era&quot;</span><span class="p">:</span> <span class="s2">&quot;ART_2011a&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;art.process_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Reco1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;art.run_type&quot;</span><span class="p">:</span> <span class="s2">&quot;protodune-sp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;core.application&quot;</span><span class="p">:</span> <span class="s2">&quot;art.reco&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;core.application.family&quot;</span><span class="p">:</span> <span class="s2">&quot;art&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;core.application.name&quot;</span><span class="p">:</span> <span class="s2">&quot;reco&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;core.application.version&quot;</span><span class="p">:</span> <span class="s2">&quot;v09_09_01&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;core.data_stream&quot;</span><span class="p">:</span> <span class="s2">&quot;physics&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;core.data_tier&quot;</span><span class="p">:</span> <span class="s2">&quot;full-reconstructed&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;core.end_time&quot;</span><span class="p">:</span> <span class="mi">1616168817</span><span class="p">,</span>
+        <span class="s2">&quot;core.end_time_utc_text&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-03-19 15:46:57&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;core.event_count&quot;</span><span class="p">:</span> <span class="mi">108</span><span class="p">,</span>
+        <span class="s2">&quot;core.file_content_status&quot;</span><span class="p">:</span> <span class="s2">&quot;good&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;core.file_format&quot;</span><span class="p">:</span> <span class="s2">&quot;artroot&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;core.file_type&quot;</span><span class="p">:</span> <span class="s2">&quot;detector&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;core.first_event_number&quot;</span><span class="p">:</span> <span class="mi">1584</span><span class="p">,</span>
+        <span class="s2">&quot;core.last_event_number&quot;</span><span class="p">:</span> <span class="mi">3028</span><span class="p">,</span>
+        <span class="s2">&quot;core.process_id&quot;</span><span class="p">:</span> <span class="mi">15256421</span><span class="p">,</span>
+        <span class="s2">&quot;core.run_type&quot;</span><span class="p">:</span> <span class="s2">&quot;protodune-sp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;core.runs&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="mi">5141</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;core.runs_subruns&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="mi">514100001</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;core.start_time&quot;</span><span class="p">:</span> <span class="mi">1616065002</span><span class="p">,</span>
+        <span class="s2">&quot;core.start_time_utc_text&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-03-18 10:56:42&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;data_quality.online_good_run_list&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;detector.hv_value&quot;</span><span class="p">:</span> <span class="mi">180</span><span class="p">,</span>
+        <span class="s2">&quot;dune.campaign&quot;</span><span class="p">:</span> <span class="s2">&quot;PDSPProd4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dune_data.accouple&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;dune_data.calibpulsemode&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;dune_data.daqconfigname&quot;</span><span class="p">:</span> <span class="s2">&quot;np04_WibsReal_Ssps_BeamTrig_00021&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dune_data.febaselinehigh&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;dune_data.fegain&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;dune_data.feleak10x&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;dune_data.feleakhigh&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;dune_data.feshapingtime&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;dune_data.inconsistent_hw_config&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;dune_data.is_fake_data&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;origin.worker_id&quot;</span><span class="p">:</span> <span class="s2">&quot;15256421&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;retention.class&quot;</span><span class="p">:</span> <span class="s2">&quot;physics&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;retention.status&quot;</span><span class="p">:</span> <span class="s2">&quot;active&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;np04_raw_run005141_0002_dl2_reco1_18126921_0_20210318T103516Z.root&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;pdsp_det_reco&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;retired&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s2">&quot;retired_by&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;retired_timestamp&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">3690769125</span><span class="p">,</span>
+    <span class="s2">&quot;updated_by&quot;</span><span class="p">:</span> <span class="s2">&quot;dunepro&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;updated_timestamp&quot;</span><span class="p">:</span> <span class="mf">1633446346.80565</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="samweb">
+<h2>samweb<a class="headerlink" href="#samweb" title="Permalink to this heading">¶</a></h2>
+<p><cite>samweb get-metadata np04_raw_run005141_0002_dl2_reco1_18126921_0_20210318T103516Z.root –json</cite></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;file_name&quot;</span><span class="p">:</span> <span class="s2">&quot;np04_raw_run005141_0002_dl2_reco1_18126921_0_20210318T103516Z.root&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;file_id&quot;</span><span class="p">:</span> <span class="mi">52500057</span><span class="p">,</span>
+    <span class="s2">&quot;create_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-03-19T16:08:14+00:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;dunepro&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;update_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-10-05T15:05:46+00:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;update_user&quot;</span><span class="p">:</span> <span class="s2">&quot;dunepro&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;file_size&quot;</span><span class="p">:</span> <span class="mi">3690769125</span><span class="p">,</span>
+    <span class="s2">&quot;checksum&quot;</span><span class="p">:</span> <span class="p">[</span>
+     <span class="s2">&quot;enstore:1952172898&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;adler32:03d6cb63&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;md5:9c9d59cc33f3b0e2167c2acb3228241e&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;content_status&quot;</span><span class="p">:</span> <span class="s2">&quot;good&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;file_type&quot;</span><span class="p">:</span> <span class="s2">&quot;detector&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;file_format&quot;</span><span class="p">:</span> <span class="s2">&quot;artroot&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;data_tier&quot;</span><span class="p">:</span> <span class="s2">&quot;full-reconstructed&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;application&quot;</span><span class="p">:</span> <span class="p">{</span>
+     <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;art&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;reco&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;v09_09_01&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;process_id&quot;</span><span class="p">:</span> <span class="mi">15256421</span><span class="p">,</span>
+    <span class="s2">&quot;event_count&quot;</span><span class="p">:</span> <span class="mi">108</span><span class="p">,</span>
+    <span class="s2">&quot;first_event&quot;</span><span class="p">:</span> <span class="mi">1584</span><span class="p">,</span>
+    <span class="s2">&quot;last_event&quot;</span><span class="p">:</span> <span class="mi">3028</span><span class="p">,</span>
+    <span class="s2">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-03-18T10:56:42+00:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-03-19T15:46:57+00:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;data_stream&quot;</span><span class="p">:</span> <span class="s2">&quot;physics&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;art.file_format_era&quot;</span><span class="p">:</span> <span class="s2">&quot;ART_2011a&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;art.file_format_version&quot;</span><span class="p">:</span> <span class="mf">13.0</span><span class="p">,</span>
+    <span class="s2">&quot;art.first_event&quot;</span><span class="p">:</span> <span class="mf">1584.0</span><span class="p">,</span>
+    <span class="s2">&quot;art.last_event&quot;</span><span class="p">:</span> <span class="mf">3028.0</span><span class="p">,</span>
+    <span class="s2">&quot;art.process_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Reco1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;art.run_type&quot;</span><span class="p">:</span> <span class="s2">&quot;protodune-sp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;beam.momentum&quot;</span><span class="p">:</span> <span class="mf">7.0</span><span class="p">,</span>
+    <span class="s2">&quot;data_quality.online_good_run_list&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;detector.hv_value&quot;</span><span class="p">:</span> <span class="mi">180</span><span class="p">,</span>
+    <span class="s2">&quot;DUNE.campaign&quot;</span><span class="p">:</span> <span class="s2">&quot;PDSPProd4&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;DUNE_data.acCouple&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;DUNE_data.calibpulsemode&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;DUNE_data.DAQConfigName&quot;</span><span class="p">:</span> <span class="s2">&quot;np04_WibsReal_Ssps_BeamTrig_00021&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;DUNE_data.febaselineHigh&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;DUNE_data.fegain&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;DUNE_data.feleak10x&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;DUNE_data.feleakHigh&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;DUNE_data.feshapingtime&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;DUNE_data.inconsistent_hw_config&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;DUNE_data.is_fake_data&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;runs&quot;</span><span class="p">:</span> <span class="p">[</span>
+     <span class="p">[</span>
+      <span class="mi">5141</span><span class="p">,</span>
+      <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">&quot;protodune-sp&quot;</span>
+     <span class="p">]</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;parents&quot;</span><span class="p">:</span> <span class="p">[</span>
+     <span class="p">{</span>
+      <span class="s2">&quot;file_name&quot;</span><span class="p">:</span> <span class="s2">&quot;np04_raw_run005141_0002_dl2.root&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;file_id&quot;</span><span class="p">:</span> <span class="mi">6605772</span>
+     <span class="p">}</span>
+    <span class="p">]</span>
+   <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Reconstructed File Example</a><ul>
+<li><a class="reference internal" href="#metacat">metacat</a></li>
+<li><a class="reference internal" href="#samweb">samweb</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="template.html"
+                          title="previous chapter">Template for minimal metadata for a file</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="mctemplate.html"
+                          title="next chapter">Template for minimal metadata for a Monte Carlo file</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/reco.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mctemplate.html" title="Template for minimal metadata for a Monte Carlo file"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="template.html" title="Template for minimal metadata for a file"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">DataCatalogDocs 0.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Reconstructed File Example</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Fermi National Accelerator Laboratory.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+  </body>
+</html>
