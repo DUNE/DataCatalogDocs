@@ -95,7 +95,7 @@ Example: Get the raw data from given protodune-sp detector runs
 
       metacat query "files from dune:all where core.file_type=detector \
        and core.run_type='protodune-sp' and core.data_tier=raw \
-       and core.data_stream=physics and core.runs[any] in (5141,5413)"
+       and core.data_stream=physics and core.runs[any] in (5141,5143)"
 
   add `--summary` after query if you want just the # of files
 
