@@ -29,7 +29,7 @@ Make certain you can point to the metacat server:
 .. code-block:: bash
 
    export METACAT_AUTH_SERVER_URL=https://metacat.fnal.gov:8143/auth/dune
-   export METACAT_SERVER_URL=https://metacat.fnal.gov:9443/dune_meta_demo/app
+   export METACAT_SERVER_URL=https://metacat.fnal.gov:9443/dune_meta_prod/app
 
 
 Then authenticate to metacat:
@@ -64,7 +64,7 @@ Then authenticate to metacat:
 
 
   1. Log in to MetaCat GUI using services password
-  2. Go to your user profile https://metacat.fnal.gov:9443/dune_meta_demo/app/gui/user?username=<yourFNALusername>
+  2. Go to your user profile https://metacat.fnal.gov:9443/dune_prod/app/gui/user?username=<yourFNALusername>
   3. Copy-paste the output from "metacat auth mydn" into blank text box in front of Add button
   4. Click Add
 
