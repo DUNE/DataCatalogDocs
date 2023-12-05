@@ -3,6 +3,10 @@ Template for minimal metadata for a file
 
 Here is an example of minimal metadata for a raw data file.
 
+Note that all keys must now be lower case. 
+
+Times need to be UTC.
+
 You can add additional information to the metadata object.
 
 Metacat version
@@ -42,7 +46,6 @@ Metacat version
           ],
           "core.start_time": "2018-10-10 17:38:27.681780+00:00",
           "core.raw_timestamp": "2018-10-10 17:38:27.681780+00:00",
-          "DUNE.Campaign":"PDHDRunII",
           "retention.status": "active",
           "retention.class": "physics"
       },
@@ -64,7 +67,6 @@ Additional information
       "updated_timestamp": null
       }
 
-  There is also parentage information available.
 
 
 Samweb version
