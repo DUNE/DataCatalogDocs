@@ -49,78 +49,81 @@
 <p>You can add additional information to the metadata object.</p>
 <div class="section" id="metacat-version">
 <h2>Metacat version<a class="headerlink" href="#metacat-version" title="Permalink to this heading">¶</a></h2>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w"> </span><span class="s2">&quot;checksums&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">     </span><span class="s2">&quot;adler32&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;c27f09b5&quot;</span>
-<span class="w">     </span><span class="p">},</span>
-<span class="w"> </span><span class="s2">&quot;created_timestamp&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1691937037.698784</span><span class="p">,</span>
-<span class="w"> </span><span class="s2">&quot;creator&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dunepro&quot;</span><span class="p">,</span>
-<span class="w"> </span><span class="s2">&quot;fid&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;0eUkJLB3SQOmlA9N&quot;</span><span class="p">,</span>
-<span class="w"> </span><span class="s2">&quot;metadata&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">     </span><span class="s2">&quot;art.file_format_era&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ART_2011a&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;art.file_format_version&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;art.first_event&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">9301</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;art.last_event&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">9400</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;art.process_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Reco1&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;art.run_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fardet-vd&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;core.application&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;art.reco&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;core.application.family&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;art&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;core.application.name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;reco&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;core.application.version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;v09_75_03d00&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;core.data_stream&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;out1&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;core.data_tier&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;hit-reconstructed&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;core.end_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1691937015.0</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;core.event_count&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;core.file_format&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;artroot&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;core.file_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mc&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;core.first_event_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">9301</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;core.last_event_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">9400</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;core.run_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fardet-vd&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;core.runs&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">         </span><span class="mf">27279</span>
-<span class="w">     </span><span class="p">],</span>
-<span class="w">     </span><span class="s2">&quot;core.runs_subruns&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">         </span><span class="mf">2727900001</span>
-<span class="w">     </span><span class="p">],</span>
-<span class="w">     </span><span class="s2">&quot;core.start_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1691936982.0</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;dune.campaign&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fd_mc_2023a&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;dune.requestid&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ritm1780305&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;dune.workflow&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="s2">&quot;cpuinfo&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;AMD EPYC 7551P 32-Core Processor&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;hostname&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;hd80.dice.priv&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;job_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;27279.93@justin-prod-sched01.dune.hep.ac.uk&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;jobscript_cpu_seconds&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">37173</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;jobscript_finish&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1691937022</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;jobscript_real_seconds&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">37212</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;jobscript_start&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1691899809</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;os_release&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Scientific Linux release 7.9 (Nitrogen)&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;request_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1019</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;site_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;UK_Bristol&quot;</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;stage_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
-<span class="w">         </span><span class="s2">&quot;user&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;amcnab@fnal.gov&quot;</span>
-<span class="w">     </span><span class="p">},</span>
-<span class="w">     </span><span class="s2">&quot;dune_mc.beam_flux_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;dune_mc.beam_polarity&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rhc&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;dune_mc.detector_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fardet-vd&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;dune_mc.electron_lifetime&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;10.4&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;dune_mc.gen_fcl_filename&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;prodgenie_anu_numu2nutau_nue2numu_dunevd10kt_1x8x6_3view_30deg.fcl&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;dune_mc.generators&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;genie&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;dune_mc.generators_version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;3.04_00c&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;dune_mc.geometry_version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dunevd10kt_3view_30deg_v3_refactored_1x8x6ref.gdml&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;dune_mc.liquid_flow&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;no&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;dune_mc.mixerconfig&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;numu2nutau_nue2numu&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;dune_mc.space_charge&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;no&quot;</span><span class="p">,</span>
-<span class="w">     </span><span class="s2">&quot;dune_mc.with_cosmics&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
-<span class="w"> </span><span class="p">},</span>
-<span class="w"> </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;anu_numu2nutau_nue2numu_dunevd10kt_1x8x6_3view_30deg_27279_93_20230813T041011Z_gen_g4_detsim_hitreco.root&quot;</span><span class="p">,</span>
-<span class="w"> </span><span class="s2">&quot;namespace&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fardet-vd&quot;</span><span class="p">,</span>
-<span class="w"> </span><span class="s2">&quot;retired&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w"> </span><span class="s2">&quot;retired_by&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w"> </span><span class="s2">&quot;retired_timestamp&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w"> </span><span class="s2">&quot;size&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1495285749</span><span class="p">,</span>
-<span class="w"> </span><span class="s2">&quot;updated_by&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w"> </span><span class="s2">&quot;updated_timestamp&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1691937037.698784</span>
-<span class="w"> </span><span class="p">}</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>{
+ &quot;checksums&quot;: {
+     &quot;adler32&quot;: &quot;c27f09b5&quot;
+     },
+ &quot;created_timestamp&quot;: 1691937037.698784,
+ &quot;creator&quot;: &quot;dunepro&quot;,
+ &quot;fid&quot;: &quot;0eUkJLB3SQOmlA9N&quot;,
+ &quot;metadata&quot;: {
+     &quot;art.file_format_era&quot;: &quot;ART_2011a&quot;,
+     &quot;art.file_format_version&quot;: 15,
+     &quot;art.first_event&quot;: 9301,
+     &quot;art.last_event&quot;: 9400,
+     &quot;art.process_name&quot;: &quot;Reco1&quot;,
+     &quot;art.run_type&quot;: &quot;fardet-vd&quot;,
+     &quot;core.application&quot;: &quot;art.reco&quot;,
+     &quot;core.application.family&quot;: &quot;art&quot;,
+     &quot;core.application.name&quot;: &quot;reco&quot;,
+     &quot;core.application.version&quot;: &quot;v09_75_03d00&quot;,
+     &quot;core.data_stream&quot;: &quot;out1&quot;,
+     &quot;core.data_tier&quot;: &quot;hit-reconstructed&quot;,
+     &quot;core.end_time&quot;: 1691937015.0,
+     &quot;core.event_count&quot;: 100,
+     &quot;code.file_content_status&quot;:&quot;good&quot;,
+     &quot;core.file_format&quot;: &quot;artroot&quot;,
+     &quot;core.file_type&quot;: &quot;mc&quot;,
+     &quot;core.first_event_number&quot;: 9301,
+     &quot;core.last_event_number&quot;: 9400,
+     &quot;core.run_type&quot;: &quot;fardet-vd&quot;,
+     &quot;core.runs&quot;: [
+         27279
+     ],
+     &quot;core.runs_subruns&quot;: [
+         2727900001
+     ],
+     &quot;core.start_time&quot;: 1691936982.0,
+     &quot;dune.campaign&quot;: &quot;fd_mc_2023a&quot;,
+     &quot;dune.requestid&quot;: &quot;ritm1780305&quot;,
+     &quot;dune.workflow&quot;: {
+         &quot;cpuinfo&quot;: &quot;AMD EPYC 7551P 32-Core Processor&quot;,
+         &quot;hostname&quot;: &quot;hd80.dice.priv&quot;,
+         &quot;job_id&quot;: &quot;27279.93@justin-prod-sched01.dune.hep.ac.uk&quot;,
+         &quot;jobscript_cpu_seconds&quot;: 37173,
+         &quot;jobscript_finish&quot;: 1691937022,
+         &quot;jobscript_real_seconds&quot;: 37212,
+         &quot;jobscript_start&quot;: 1691899809,
+         &quot;os_release&quot;: &quot;Scientific Linux release 7.9 (Nitrogen)&quot;,
+         &quot;request_id&quot;: 1019,
+         &quot;site_name&quot;: &quot;UK_Bristol&quot;,
+         &quot;stage_id&quot;: 1,
+         &quot;user&quot;: &quot;amcnab@fnal.gov&quot;
+     },
+     &quot;dune_mc.beam_flux_id&quot;: &quot;1&quot;,
+     &quot;dune_mc.beam_polarity&quot;: &quot;rhc&quot;,
+     &quot;dune_mc.detector_type&quot;: &quot;fardet-vd&quot;,
+     &quot;dune_mc.electron_lifetime&quot;: &quot;10.4&quot;,
+     &quot;dune_mc.gen_fcl_filename&quot;: &quot;prodgenie_anu_numu2nutau_nue2numu_dunevd10kt_1x8x6_3view_30deg.fcl&quot;,
+     &quot;dune_mc.generators&quot;: &quot;genie&quot;,
+     &quot;dune_mc.generators_version&quot;: &quot;3.04_00c&quot;,
+     &quot;dune_mc.geometry_version&quot;: &quot;dunevd10kt_3view_30deg_v3_refactored_1x8x6ref.gdml&quot;,
+     &quot;dune_mc.liquid_flow&quot;: &quot;no&quot;,
+     &quot;dune_mc.mixerconfig&quot;: &quot;numu2nutau_nue2numu&quot;,
+     &quot;dune_mc.space_charge&quot;: &quot;no&quot;,
+     &quot;dune_mc.with_cosmics&quot;: 0
+     “retention.class”: “simulation”,
+     “retention.status”: “active”
+},
+ &quot;name&quot;: &quot;anu_numu2nutau_nue2numu_dunevd10kt_1x8x6_3view_30deg_27279_93_20230813T041011Z_gen_g4_detsim_hitreco.root&quot;,
+ &quot;namespace&quot;: &quot;fardet-vd&quot;,
+ &quot;retired&quot;: false,
+ &quot;retired_by&quot;: null,
+ &quot;retired_timestamp&quot;: null,
+ &quot;size&quot;: 1495285749,
+ &quot;updated_by&quot;: null,
+ &quot;updated_timestamp&quot;: 1691937037.698784
+ }
 </pre></div>
 </div>
 </div>

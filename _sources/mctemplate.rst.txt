@@ -32,6 +32,7 @@ Metacat version
         "core.data_tier": "hit-reconstructed",
         "core.end_time": 1691937015.0,
         "core.event_count": 100,
+	"code.file_content_status":"good",
         "core.file_format": "artroot",
         "core.file_type": "mc",
         "core.first_event_number": 9301,
@@ -72,7 +73,9 @@ Metacat version
         "dune_mc.mixerconfig": "numu2nutau_nue2numu",
         "dune_mc.space_charge": "no",
         "dune_mc.with_cosmics": 0
-    },
+	“retention.class”: “simulation”,
+	“retention.status”: “active”
+   },
     "name": "anu_numu2nutau_nue2numu_dunevd10kt_1x8x6_3view_30deg_27279_93_20230813T041011Z_gen_g4_detsim_hitreco.root",
     "namespace": "fardet-vd",
     "retired": false,
