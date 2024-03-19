@@ -1,11 +1,11 @@
 Glossary
-========
+--------
 
 Incomplete list of keys used 
 
 
 Minimal terms for raw data
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 :name:  File name
 :namespace: Metacat namespace for file 
