@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glossary &#8212; DataCatalogDocs 0.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="canonical" href="https://dune.github.io/DataCatalogDocs/glossary.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Information that should probably go into a runs database" href="runInfo.html" />
+    <link rel="prev" title="Template for minimal metadata for a Monte Carlo file" href="mctemplate.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="runInfo.html" title="Information that should probably go into a runs database"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mctemplate.html" title="Template for minimal metadata for a Monte Carlo file"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">DataCatalogDocs 0.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Glossary</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="glossary">
+<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this heading">¶</a></h1>
+<p>Incomplete list of keys used</p>
+<div class="section" id="minimal-terms-for-raw-data">
+<h2>Minimal terms for raw data<a class="headerlink" href="#minimal-terms-for-raw-data" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">name</dt>
+<dd class="field-odd"><p>File name</p>
+</dd>
+<dt class="field-even">namespace</dt>
+<dd class="field-even"><p>Metacat namespace for file</p>
+</dd>
+<dt class="field-odd">checksums</dt>
+<dd class="field-odd"><p>dictionary of checksums - adler32 is the default</p>
+</dd>
+<dt class="field-even">created_timestamp</dt>
+<dd class="field-even"><p>Unix timestamp for when file was cataloged</p>
+</dd>
+<dt class="field-odd">creator</dt>
+<dd class="field-odd"><p>account that created the file</p>
+</dd>
+<dt class="field-even">size</dt>
+<dd class="field-even"><p>size in bytes</p>
+</dd>
+<dt class="field-odd">metadata</dt>
+<dd class="field-odd"><p>description of file contents with this content</p>
+</dd>
+<dt class="field-even">core.application.family</dt>
+<dd class="field-even"><p>high level application description (art, edep-sim, art-daq)</p>
+</dd>
+<dt class="field-odd">core.application.name</dt>
+<dd class="field-odd"><p>specific application name</p>
+</dd>
+<dt class="field-even">core.application.version</dt>
+<dd class="field-even"><p>version of code</p>
+</dd>
+<dt class="field-odd">core.data_stream</dt>
+<dd class="field-odd"><p>type of data taking (commissioning, calibration, test, physics, cosmics)</p>
+</dd>
+<dt class="field-even">core.data_tier</dt>
+<dd class="field-even"><p>type of data (raw, g4, )</p>
+</dd>
+<dt class="field-odd">core.end_time</dt>
+<dd class="field-odd"><p>time at which the process that created the file ended</p>
+</dd>
+<dt class="field-even">core.event_count</dt>
+<dd class="field-even"><p>number of events in the file</p>
+</dd>
+<dt class="field-odd">core.events</dt>
+<dd class="field-odd"><p>[list of events in the file],</p>
+</dd>
+<dt class="field-even">core.file_content_status</dt>
+<dd class="field-even"><p>status of the file - should be good</p>
+</dd>
+<dt class="field-odd">core.file_format</dt>
+<dd class="field-odd"><p>format of the data (hdf5, root)</p>
+</dd>
+<dt class="field-even">core.file_type</dt>
+<dd class="field-even"><p>flag to tell mc from data, (detector or mc)</p>
+</dd>
+<dt class="field-odd">core.first_event_number</dt>
+<dd class="field-odd"><p>first event number</p>
+</dd>
+<dt class="field-even">core.last_event_number</dt>
+<dd class="field-even"><p>last event number</p>
+</dd>
+<dt class="field-odd">core.run_type</dt>
+<dd class="field-odd"><p>which detector took the data “protodune-sp, hd-fardet …”</p>
+</dd>
+<dt class="field-even">core.runs</dt>
+<dd class="field-even"><p>[list of runs]</p>
+</dd>
+<dt class="field-odd">core.runs_subruns</dt>
+<dd class="field-odd"><p>[list of subruns in run*100000+subrun format]</p>
+</dd>
+<dt class="field-even">core.start_time</dt>
+<dd class="field-even"><p>time at which the process that created the file started</p>
+</dd>
+<dt class="field-odd">retention.status</dt>
+<dd class="field-odd"><p>flag to tell if the file is being used and should be retained</p>
+</dd>
+<dt class="field-even">retention.class</dt>
+<dd class="field-even"><p>flag used to determine retention status (physics, test,  …)</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Glossary</a><ul>
+<li><a class="reference internal" href="#minimal-terms-for-raw-data">Minimal terms for raw data</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="mctemplate.html"
+                          title="previous chapter">Template for minimal metadata for a Monte Carlo file</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="runInfo.html"
+                          title="next chapter">Information that should probably go into a runs database</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/glossary.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="runInfo.html" title="Information that should probably go into a runs database"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mctemplate.html" title="Template for minimal metadata for a Monte Carlo file"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">DataCatalogDocs 0.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Glossary</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Fermi National Accelerator Laboratory.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+  </body>
+</html>

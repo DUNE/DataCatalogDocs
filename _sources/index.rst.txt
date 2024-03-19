@@ -30,6 +30,7 @@ Contents
     template
     reco
     mctemplate
+    glossary
     runInfo
     OlderSam
     related

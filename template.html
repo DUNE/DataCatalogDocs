@@ -60,6 +60,11 @@
 <span class="w">    </span><span class="s2">&quot;created_timestamp&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">2018</span><span class="o">-</span><span class="mf">10</span><span class="o">-</span><span class="mf">10</span><span class="w"> </span><span class="mf">17</span><span class="o">:</span><span class="mf">38</span><span class="o">:</span><span class="mf">27.681780</span><span class="o">+</span><span class="mo">00</span><span class="o">:</span><span class="mo">00</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;creator&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dunepro&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="s2">&quot;size&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">8289321123</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;retired&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;retired_by&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;retired_timestamp&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;updated_by&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;updated_timestamp&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span>
 <span class="w">    </span><span class="s2">&quot;metadata&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="s2">&quot;core.application.family&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;art&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="s2">&quot;core.application.name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dune-artdaq&quot;</span><span class="p">,</span>
@@ -82,7 +87,6 @@
 <span class="w">            </span><span class="mf">514100001</span>
 <span class="w">        </span><span class="p">],</span>
 <span class="w">        </span><span class="s2">&quot;core.start_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-10-10 17:38:27.681780+00:00&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;core.raw_timestamp&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-10-10 17:38:27.681780+00:00&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="s2">&quot;retention.status&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="s2">&quot;retention.class&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;physics&quot;</span>
 <span class="w">    </span><span class="p">},</span>
@@ -94,11 +98,10 @@
 <div class="section" id="additional-information">
 <h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this heading">¶</a></h2>
 <blockquote>
-<div><p>This information allows files to be modified and retired</p>
+<div><p>This information is added later to track changes</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;retired&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="s2">&quot;retired_by&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
 <span class="s2">&quot;retired_timestamp&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="s2">&quot;size&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">8289321123</span><span class="p">,</span>
 <span class="s2">&quot;updated_by&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
 <span class="s2">&quot;updated_timestamp&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span>
 <span class="p">}</span>
@@ -134,6 +137,89 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+<div class="section" id="glossary">
+<h3>Glossary<a class="headerlink" href="#glossary" title="Permalink to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">name</dt>
+<dd class="field-odd"><p>File name</p>
+</dd>
+<dt class="field-even">namespace</dt>
+<dd class="field-even"><p>Metacat namespace for file</p>
+</dd>
+<dt class="field-odd">checksums</dt>
+<dd class="field-odd"><p>dictionary of checksums - adler32 is the default</p>
+</dd>
+<dt class="field-even">created_timestamp</dt>
+<dd class="field-even"><p>Unix timestamp for when file was cataloged</p>
+</dd>
+<dt class="field-odd">creator</dt>
+<dd class="field-odd"><p>account that created the file</p>
+</dd>
+<dt class="field-even">size</dt>
+<dd class="field-even"><p>size in bytes</p>
+</dd>
+<dt class="field-odd">metadata</dt>
+<dd class="field-odd"><p>description of file contents with this content</p>
+</dd>
+<dt class="field-even">core.application.family</dt>
+<dd class="field-even"><p>high level application description (art, edep-sim, art-daq)</p>
+</dd>
+<dt class="field-odd">core.application.name</dt>
+<dd class="field-odd"><p>specific application name</p>
+</dd>
+<dt class="field-even">core.application.version</dt>
+<dd class="field-even"><p>version of code</p>
+</dd>
+<dt class="field-odd">core.data_stream</dt>
+<dd class="field-odd"><p>type of data taking (commissioning, calibration, test, physics, cosmics)</p>
+</dd>
+<dt class="field-even">core.data_tier</dt>
+<dd class="field-even"><p>type of data (raw, g4, )</p>
+</dd>
+<dt class="field-odd">core.end_time</dt>
+<dd class="field-odd"><p>time at which the process that created the file ended</p>
+</dd>
+<dt class="field-even">core.event_count</dt>
+<dd class="field-even"><p>number of events in the file</p>
+</dd>
+<dt class="field-odd">core.events</dt>
+<dd class="field-odd"><p>[list of events in the file],</p>
+</dd>
+<dt class="field-even">core.file_content_status</dt>
+<dd class="field-even"><p>status of the file - should be good</p>
+</dd>
+<dt class="field-odd">core.file_format</dt>
+<dd class="field-odd"><p>format of the data (hdf5, root)</p>
+</dd>
+<dt class="field-even">core.file_type</dt>
+<dd class="field-even"><p>flag to tell mc from data, (detector or mc)</p>
+</dd>
+<dt class="field-odd">core.first_event_number</dt>
+<dd class="field-odd"><p>first event number</p>
+</dd>
+<dt class="field-even">core.last_event_number</dt>
+<dd class="field-even"><p>last event number</p>
+</dd>
+<dt class="field-odd">core.run_type</dt>
+<dd class="field-odd"><p>which detector took the data “protodune-sp, hd-fardet …”</p>
+</dd>
+<dt class="field-even">core.runs</dt>
+<dd class="field-even"><p>[list of runs]</p>
+</dd>
+<dt class="field-odd">core.runs_subruns</dt>
+<dd class="field-odd"><p>[list of subruns in run*100000+subrun format]</p>
+</dd>
+<dt class="field-even">core.start_time</dt>
+<dd class="field-even"><p>time at which the process that created the file started</p>
+</dd>
+<dt class="field-odd">retention.status</dt>
+<dd class="field-odd"><p>flag to tell if the file is being used and should be retained</p>
+</dd>
+<dt class="field-even">retention.class</dt>
+<dd class="field-even"><p>flag used to determine retention status (physics, test,  …)</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 
@@ -150,7 +236,10 @@
 <li><a class="reference internal" href="#">Template for minimal metadata for a file</a><ul>
 <li><a class="reference internal" href="#metacat-version">Metacat version</a></li>
 <li><a class="reference internal" href="#additional-information">Additional information</a></li>
-<li><a class="reference internal" href="#samweb-version">Samweb version</a></li>
+<li><a class="reference internal" href="#samweb-version">Samweb version</a><ul>
+<li><a class="reference internal" href="#glossary">Glossary</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
