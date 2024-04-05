@@ -52,24 +52,24 @@ Metacat version
               514100001
           ],
           "core.start_time": 1539193107.0,
-          "dune.daq_test": True
+          "dune.daq_test": "True",
           "retention.status": "active",
           "retention.class": "physics"
       },
 
   }
 
-Minerva version:
+Minerva version
 ^^^^^^^^^^^^^^^
 
 .. code-block:: javascript
 
-{
+  {
     "checksums": {
         "adler32": "e854e667"
     },
     "created_timestamp": 1691170423.961402,
-     "metadata": {
+    "metadata": {
         "core.data_stream": "pdstl",
         "core.data_tier": "binary-raw",
         "core.end_time": 1690992518,
@@ -93,18 +93,18 @@ Minerva version:
             4007400001
         ],
         "core.start_time": 1690992515,
-        "dune.daq_test": True,
+        "dune.daq_test": "True",
         "misc.file_partition": 1,
         "online.triggerconfig": "NOFILE",
         "online.triggertype": "oneshot",
         "retention.status": "active",
         "retention.class": "commissioning"
-
     },
     "name": "TS1_00040074_0001_pdstl_v09_2308021608_RawData.dat",
     "namespace": "neardet-2x2-minerva",
-     "size": 10543808,
- }
+    "size": 10543808
+
+  }
 
 Additional information
 ^^^^^^^^^^^^^^^^^^^^^^

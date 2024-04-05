@@ -89,7 +89,7 @@ Minerva is allowed to add core.group, core.lum_block_ranges, misc.file_partition
 <span class="w">            </span><span class="mf">514100001</span>
 <span class="w">        </span><span class="p">],</span>
 <span class="w">        </span><span class="s2">&quot;core.start_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1539193107.0</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;dune.daq_test&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">True</span>
+<span class="w">        </span><span class="s2">&quot;dune.daq_test&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;True&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="s2">&quot;retention.status&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="s2">&quot;retention.class&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;physics&quot;</span>
 <span class="w">    </span><span class="p">},</span>
@@ -99,70 +99,50 @@ Minerva is allowed to add core.group, core.lum_block_ranges, misc.file_partition
 </div>
 </div>
 <div class="section" id="minerva-version">
-<h2>Minerva version:<a class="headerlink" href="#minerva-version" title="Permalink to this heading">¶</a></h2>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>
+<h2>Minerva version<a class="headerlink" href="#minerva-version" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="s2">&quot;checksums&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="s2">&quot;adler32&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;e854e667&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s2">&quot;created_timestamp&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1691170423.961402</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;metadata&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="s2">&quot;core.data_stream&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pdstl&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;core.data_tier&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;binary-raw&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;core.end_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1690992518</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;core.event_count&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;core.file_format&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;binary&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;core.file_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;importedDetector&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;core.first_event_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">4592941</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;core.group&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;minerva&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;core.last_event_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">4593040</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;core.lum_block_ranges&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="p">[</span>
+<span class="w">              </span><span class="mf">4592941</span><span class="p">,</span>
+<span class="w">              </span><span class="mf">4593040</span>
+<span class="w">          </span><span class="p">]</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="s2">&quot;core.run_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;neardet-2x2-minerva&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;core.runs&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="mf">40074</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="s2">&quot;core.runs_subruns&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="mf">4007400001</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="s2">&quot;core.start_time&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1690992515</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;dune.daq_test&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;True&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;misc.file_partition&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;online.triggerconfig&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;NOFILE&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;online.triggertype&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;oneshot&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;retention.status&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;active&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;retention.class&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;commissioning&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;TS1_00040074_0001_pdstl_v09_2308021608_RawData.dat&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;namespace&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;neardet-2x2-minerva&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;size&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">10543808</span>
+
+<span class="p">}</span>
 </pre></div>
 </div>
-<dl>
-<dt>{</dt><dd><blockquote>
-<div><dl class="simple">
-<dt>“checksums”: {</dt><dd><p>“adler32”: “e854e667”</p>
-</dd>
-</dl>
-<p>},
-“created_timestamp”: 1691170423.961402,</p>
-<blockquote>
-<div><dl>
-<dt>“metadata”: {</dt><dd><p>“core.data_stream”: “pdstl”,
-“core.data_tier”: “binary-raw”,
-“core.end_time”: 1690992518,
-“core.event_count”: 100,
-“core.file_format”: “binary”,
-“core.file_type”: “importedDetector”,
-“core.first_event_number”: 4592941,
-“core.group”: “minerva”,
-“core.last_event_number”: 4593040,
-“core.lum_block_ranges”: [</p>
-<blockquote>
-<div><dl class="simple">
-<dt>[</dt><dd><p>4592941,
-4593040</p>
-</dd>
-</dl>
-<p>]</p>
-</div></blockquote>
-<p>],
-“core.run_type”: “neardet-2x2-minerva”,
-“core.runs”: [</p>
-<blockquote>
-<div><p>40074</p>
-</div></blockquote>
-<p>],
-“core.runs_subruns”: [</p>
-<blockquote>
-<div><p>4007400001</p>
-</div></blockquote>
-<p>],
-“core.start_time”: 1690992515,
-“dune.daq_test”: True,
-“misc.file_partition”: 1,
-“online.triggerconfig”: “NOFILE”,
-“online.triggertype”: “oneshot”,
-“retention.status”: “active”,
-“retention.class”: “commissioning”</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>},
-“name”: “TS1_00040074_0001_pdstl_v09_2308021608_RawData.dat”,
-“namespace”: “neardet-2x2-minerva”,</p>
-<blockquote>
-<div><p>“size”: 10543808,</p>
-</div></blockquote>
-</div></blockquote>
-<p>}</p>
-</dd>
-</dl>
 </div>
 <div class="section" id="additional-information">
 <h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this heading">¶</a></h2>
@@ -225,7 +205,7 @@ they can not be added at file creation time or modified via a json file.</p>
     <ul>
 <li><a class="reference internal" href="#">Template for minimal metadata for a file</a><ul>
 <li><a class="reference internal" href="#metacat-version">Metacat version</a></li>
-<li><a class="reference internal" href="#minerva-version">Minerva version:</a></li>
+<li><a class="reference internal" href="#minerva-version">Minerva version</a></li>
 <li><a class="reference internal" href="#additional-information">Additional information</a></li>
 <li><a class="reference internal" href="#samweb-version">Samweb version</a></li>
 </ul>
