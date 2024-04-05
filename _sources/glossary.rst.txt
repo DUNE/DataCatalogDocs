@@ -32,5 +32,6 @@ Minimal terms for raw data
 :core.runs: [list of runs]
 :core.runs_subruns: [list of subruns in run*100000+subrun format]
 :core.start_time: time at which the process that created the file started
+:dune.daq_test:  True / False  True if this is a Test run, False otherwise--np04 only.
 :retention.status: flag to tell if the file is being used and should be retained
 :retention.class: flag used to determine retention status (physics, test,  ...)

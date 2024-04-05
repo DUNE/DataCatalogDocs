@@ -28,6 +28,7 @@ Contents
     sam2metacat
     metadatameaning
     template
+    template_input
     reco
     mctemplate
     glossary
