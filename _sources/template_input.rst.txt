@@ -60,6 +60,9 @@ Metacat version
   }
 
 Minerva version:
+^^^^^^^^^^^^^^^
+
+.. code-block:: javascript
 
 {
     "checksums": {
