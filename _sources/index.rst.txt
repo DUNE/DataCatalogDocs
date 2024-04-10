@@ -27,11 +27,10 @@ Contents
     Intro
     sam2metacat
     metadatameaning
-    template
+    glossary
     template_input
     reco
-    mctemplate
-    glossary
+    mcreco
     runInfo
     OlderSam
     related

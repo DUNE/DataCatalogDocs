@@ -1,9 +1,13 @@
-Template for minimal metadata for a file
-----------------------------------------
+Template for minimal metadata for a raw data file
+-------------------------------------------------
 
 Here is an example of minimal metadata for a raw data file.
 This has been revised to show what an input metacat-native
-file should look like, removing those fields which are auto-genenerated
+file should look like. 
+
+Some fields are auto-genenerated and documented under additional informatiob below
+
+See the :ref:`glossary` for the definition of the keys. 
 
 Note that all keys must now be lower case. 
 
