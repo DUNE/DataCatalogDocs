@@ -67,6 +67,24 @@
 <dt class="field-even">size</dt>
 <dd class="field-even"><p>size in bytes</p>
 </dd>
+<dt class="field-odd">fid</dt>
+<dd class="field-odd"><p>hash-name for the file - equivalent to namespace:name</p>
+</dd>
+<dt class="field-even">retired</dt>
+<dd class="field-even"><p>has this file been retired?</p>
+</dd>
+<dt class="field-odd">retired_by</dt>
+<dd class="field-odd"><p>who did it?</p>
+</dd>
+<dt class="field-even">retired_timestamp</dt>
+<dd class="field-even"><p>when was it retired</p>
+</dd>
+<dt class="field-odd">updated_by</dt>
+<dd class="field-odd"><p>who has updated this catalog entry?</p>
+</dd>
+<dt class="field-even">updated_timestamp</dt>
+<dd class="field-even"><p>when did they do it?</p>
+</dd>
 <dt class="field-odd">metadata</dt>
 <dd class="field-odd"><p>description of file contents with this content</p>
 </dd>
@@ -95,7 +113,7 @@
 <dd class="field-odd"><p>[list of events in the file],</p>
 </dd>
 <dt class="field-even">core.file_content_status</dt>
-<dd class="field-even"><p>status of the file - should be good</p>
+<dd class="field-even"><p>status of the file - default is good</p>
 </dd>
 <dt class="field-odd">core.file_format</dt>
 <dd class="field-odd"><p>format of the data (hdf5, root)</p>
@@ -132,6 +150,35 @@
 </dd>
 </dl>
 </div>
+<div class="section" id="additional-terms-used-for-reconstruction-and-simulation">
+<h2>Additional terms used for reconstruction and simulation<a class="headerlink" href="#additional-terms-used-for-reconstruction-and-simulation" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">parents</dt>
+<dd class="field-odd"><p>The files that this file was produced from</p>
+</dd>
+<dt class="field-even">children</dt>
+<dd class="field-even"><p>list of files that are derived from this file</p>
+</dd>
+<dt class="field-odd">dune.campaign</dt>
+<dd class="field-odd"><p>A big scale activity used for production - examples are PDSPProd4a and fd_mc_2023a_reco2</p>
+</dd>
+<dt class="field-even">dune.requestid</dt>
+<dd class="field-even"><p>The formal request id for the campaign in the system</p>
+</dd>
+<dt class="field-odd">dune.config_file</dt>
+<dd class="field-odd"><p>The top level configuration used to produce this file</p>
+</dd>
+<dt class="field-even">dune.workflow</dt>
+<dd class="field-even"><p>a description of the workflow that produced this file</p>
+</dd>
+<dt class="field-odd">dune.output_status</dt>
+<dd class="field-odd"><p>this should be confirmed - this tells you that the output exists</p>
+</dd>
+<dt class="field-even">dune_mc.gen_fcl_filename</dt>
+<dd class="field-even"><p>tells you the generator fcl file so you know what kind of mc it is.</p>
+</dd>
+</dl>
+</div>
 </div>
 
 
@@ -146,6 +193,7 @@
     <ul>
 <li><a class="reference internal" href="#">Glossary</a><ul>
 <li><a class="reference internal" href="#minimal-terms-for-raw-data">Minimal terms for raw data</a></li>
+<li><a class="reference internal" href="#additional-terms-used-for-reconstruction-and-simulation">Additional terms used for reconstruction and simulation</a></li>
 </ul>
 </li>
 </ul>
