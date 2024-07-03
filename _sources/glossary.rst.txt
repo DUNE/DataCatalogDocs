@@ -16,7 +16,6 @@ Minimal terms for raw data
 :creator: account that created the file
 :size: size in bytes
 :fid: hash-name for the file - equivalent to namespace:name
-
 :retired: has this file been retired?
 :retired_by: who did it? 
 :retired_timestamp: when was it retired
@@ -28,10 +27,10 @@ Minimal terms for raw data
 :metadata: description of file contents with this content
 :core.data_stream: type of data taking (commissioning, calibration, test, physics, cosmics)
 :core.data_tier: type of data (raw, g4, )
-:core.end_time: time at which the process that created the file ended
+:core.end_time: unix UTC time at which the process that created the file ended - 
 :core.event_count: number of events in the file 
 :core.events: [list of events in the file],
-:core.file_content_status: status of the file - default is good
+:core.file_content_status: status of the file - default is "good"
 :core.file_format: format of the data (hdf5, root)
 :core.file_type: flag to tell mc from data, (detector or mc)
 :core.first_event_number:  first event number
@@ -39,9 +38,8 @@ Minimal terms for raw data
 :core.run_type: which detector took the data "protodune-sp, hd-fardet ..."
 :core.runs: [list of runs]
 :core.runs_subruns: [list of subruns in run*100000+subrun format]
-:core.start_time: time at which the process that created the file started
-:dune.daq_test:  True / False  True if this is a Test run, False otherwise--np04 only.
-:retention.status: flag to tell if the file is being used and should be retained
+:core.start_time: unix UTC time at which the process that created the file started
+:retention.status: should be "active" flag to tell if the file is being used and should be retained
 :retention.class: flag used to determine retention status (physics, test,  ...)
 
 
@@ -54,8 +52,8 @@ Additional terms used for reconstruction and simulation
 :dune.campaign:  A big scale activity used for production - examples are PDSPProd4a and fd_mc_2023a_reco2
 :dune.requestid: The formal request id for the campaign in the system
 :dune.config_file:  The top level configuration used to produce this file 
-:dune.workflow: a description of the workflow that produced this file
-:dune.output_status: the should be confirmed - this tells you that the output exists
+:dune.workflow: a description of the workflow that produced this file - produced by the JustIn system
+:dune.output_status: the value should be "confirmed" - this tells you that the output exists
 :core.application.family: broad description of the application (art/edepsim)
 :core.application.name: the specific application, reco1/reco2/detsim...
 :core.application.version: the DUNESW version
@@ -64,7 +62,6 @@ Additional terms used for reconstruction and simulation
 Monte Carlo specific terms
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-:dune.requestid: the service-now ticket for the mc request
 :dune_mc.gen_fcl_filename: tells you the generator fcl file so you know what kind of mc it is. 
 :dune_mc.geometry_version:  the geometry version used
 

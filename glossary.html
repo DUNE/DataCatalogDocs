@@ -95,7 +95,7 @@
 <dd class="field-odd"><p>type of data (raw, g4, )</p>
 </dd>
 <dt class="field-even">core.end_time</dt>
-<dd class="field-even"><p>time at which the process that created the file ended</p>
+<dd class="field-even"><p>unix UTC time at which the process that created the file ended -</p>
 </dd>
 <dt class="field-odd">core.event_count</dt>
 <dd class="field-odd"><p>number of events in the file</p>
@@ -104,7 +104,7 @@
 <dd class="field-even"><p>[list of events in the file],</p>
 </dd>
 <dt class="field-odd">core.file_content_status</dt>
-<dd class="field-odd"><p>status of the file - default is good</p>
+<dd class="field-odd"><p>status of the file - default is “good”</p>
 </dd>
 <dt class="field-even">core.file_format</dt>
 <dd class="field-even"><p>format of the data (hdf5, root)</p>
@@ -128,16 +128,13 @@
 <dd class="field-even"><p>[list of subruns in run*100000+subrun format]</p>
 </dd>
 <dt class="field-odd">core.start_time</dt>
-<dd class="field-odd"><p>time at which the process that created the file started</p>
+<dd class="field-odd"><p>unix UTC time at which the process that created the file started</p>
 </dd>
-<dt class="field-even">dune.daq_test</dt>
-<dd class="field-even"><p>True / False  True if this is a Test run, False otherwise–np04 only.</p>
+<dt class="field-even">retention.status</dt>
+<dd class="field-even"><p>should be “active” flag to tell if the file is being used and should be retained</p>
 </dd>
-<dt class="field-odd">retention.status</dt>
-<dd class="field-odd"><p>flag to tell if the file is being used and should be retained</p>
-</dd>
-<dt class="field-even">retention.class</dt>
-<dd class="field-even"><p>flag used to determine retention status (physics, test,  …)</p>
+<dt class="field-odd">retention.class</dt>
+<dd class="field-odd"><p>flag used to determine retention status (physics, test,  …)</p>
 </dd>
 </dl>
 </div>
@@ -160,10 +157,10 @@
 <dd class="field-odd"><p>The top level configuration used to produce this file</p>
 </dd>
 <dt class="field-even">dune.workflow</dt>
-<dd class="field-even"><p>a description of the workflow that produced this file</p>
+<dd class="field-even"><p>a description of the workflow that produced this file - produced by the JustIn system</p>
 </dd>
 <dt class="field-odd">dune.output_status</dt>
-<dd class="field-odd"><p>the should be confirmed - this tells you that the output exists</p>
+<dd class="field-odd"><p>the value should be “confirmed” - this tells you that the output exists</p>
 </dd>
 <dt class="field-even">core.application.family</dt>
 <dd class="field-even"><p>broad description of the application (art/edepsim)</p>
@@ -182,14 +179,11 @@
 <div class="section" id="monte-carlo-specific-terms">
 <h2>Monte Carlo specific terms<a class="headerlink" href="#monte-carlo-specific-terms" title="Permalink to this heading">¶</a></h2>
 <dl class="field-list simple">
-<dt class="field-odd">dune.requestid</dt>
-<dd class="field-odd"><p>the service-now ticket for the mc request</p>
+<dt class="field-odd">dune_mc.gen_fcl_filename</dt>
+<dd class="field-odd"><p>tells you the generator fcl file so you know what kind of mc it is.</p>
 </dd>
-<dt class="field-even">dune_mc.gen_fcl_filename</dt>
-<dd class="field-even"><p>tells you the generator fcl file so you know what kind of mc it is.</p>
-</dd>
-<dt class="field-odd">dune_mc.geometry_version</dt>
-<dd class="field-odd"><p>the geometry version used</p>
+<dt class="field-even">dune_mc.geometry_version</dt>
+<dd class="field-even"><p>the geometry version used</p>
 </dd>
 </dl>
 <p>there may be others in future.</p>
