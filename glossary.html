@@ -88,65 +88,56 @@
 <dt class="field-odd">metadata</dt>
 <dd class="field-odd"><p>description of file contents with this content</p>
 </dd>
-<dt class="field-even">core.application.family</dt>
-<dd class="field-even"><p>high level application description (art, edep-sim, art-daq)</p>
+<dt class="field-even">core.data_stream</dt>
+<dd class="field-even"><p>type of data taking (commissioning, calibration, test, physics, cosmics)</p>
 </dd>
-<dt class="field-odd">core.application.name</dt>
-<dd class="field-odd"><p>specific application name</p>
+<dt class="field-odd">core.data_tier</dt>
+<dd class="field-odd"><p>type of data (raw, g4, )</p>
 </dd>
-<dt class="field-even">core.application.version</dt>
-<dd class="field-even"><p>version of code</p>
+<dt class="field-even">core.end_time</dt>
+<dd class="field-even"><p>time at which the process that created the file ended</p>
 </dd>
-<dt class="field-odd">core.data_stream</dt>
-<dd class="field-odd"><p>type of data taking (commissioning, calibration, test, physics, cosmics)</p>
+<dt class="field-odd">core.event_count</dt>
+<dd class="field-odd"><p>number of events in the file</p>
 </dd>
-<dt class="field-even">core.data_tier</dt>
-<dd class="field-even"><p>type of data (raw, g4, )</p>
+<dt class="field-even">core.events</dt>
+<dd class="field-even"><p>[list of events in the file],</p>
 </dd>
-<dt class="field-odd">core.end_time</dt>
-<dd class="field-odd"><p>time at which the process that created the file ended</p>
+<dt class="field-odd">core.file_content_status</dt>
+<dd class="field-odd"><p>status of the file - default is good</p>
 </dd>
-<dt class="field-even">core.event_count</dt>
-<dd class="field-even"><p>number of events in the file</p>
+<dt class="field-even">core.file_format</dt>
+<dd class="field-even"><p>format of the data (hdf5, root)</p>
 </dd>
-<dt class="field-odd">core.events</dt>
-<dd class="field-odd"><p>[list of events in the file],</p>
+<dt class="field-odd">core.file_type</dt>
+<dd class="field-odd"><p>flag to tell mc from data, (detector or mc)</p>
 </dd>
-<dt class="field-even">core.file_content_status</dt>
-<dd class="field-even"><p>status of the file - default is good</p>
+<dt class="field-even">core.first_event_number</dt>
+<dd class="field-even"><p>first event number</p>
 </dd>
-<dt class="field-odd">core.file_format</dt>
-<dd class="field-odd"><p>format of the data (hdf5, root)</p>
+<dt class="field-odd">core.last_event_number</dt>
+<dd class="field-odd"><p>last event number</p>
 </dd>
-<dt class="field-even">core.file_type</dt>
-<dd class="field-even"><p>flag to tell mc from data, (detector or mc)</p>
+<dt class="field-even">core.run_type</dt>
+<dd class="field-even"><p>which detector took the data “protodune-sp, hd-fardet …”</p>
 </dd>
-<dt class="field-odd">core.first_event_number</dt>
-<dd class="field-odd"><p>first event number</p>
+<dt class="field-odd">core.runs</dt>
+<dd class="field-odd"><p>[list of runs]</p>
 </dd>
-<dt class="field-even">core.last_event_number</dt>
-<dd class="field-even"><p>last event number</p>
+<dt class="field-even">core.runs_subruns</dt>
+<dd class="field-even"><p>[list of subruns in run*100000+subrun format]</p>
 </dd>
-<dt class="field-odd">core.run_type</dt>
-<dd class="field-odd"><p>which detector took the data “protodune-sp, hd-fardet …”</p>
+<dt class="field-odd">core.start_time</dt>
+<dd class="field-odd"><p>time at which the process that created the file started</p>
 </dd>
-<dt class="field-even">core.runs</dt>
-<dd class="field-even"><p>[list of runs]</p>
+<dt class="field-even">dune.daq_test</dt>
+<dd class="field-even"><p>True / False  True if this is a Test run, False otherwise–np04 only.</p>
 </dd>
-<dt class="field-odd">core.runs_subruns</dt>
-<dd class="field-odd"><p>[list of subruns in run*100000+subrun format]</p>
+<dt class="field-odd">retention.status</dt>
+<dd class="field-odd"><p>flag to tell if the file is being used and should be retained</p>
 </dd>
-<dt class="field-even">core.start_time</dt>
-<dd class="field-even"><p>time at which the process that created the file started</p>
-</dd>
-<dt class="field-odd">dune.daq_test</dt>
-<dd class="field-odd"><p>True / False  True if this is a Test run, False otherwise–np04 only.</p>
-</dd>
-<dt class="field-even">retention.status</dt>
-<dd class="field-even"><p>flag to tell if the file is being used and should be retained</p>
-</dd>
-<dt class="field-odd">retention.class</dt>
-<dd class="field-odd"><p>flag used to determine retention status (physics, test,  …)</p>
+<dt class="field-even">retention.class</dt>
+<dd class="field-even"><p>flag used to determine retention status (physics, test,  …)</p>
 </dd>
 </dl>
 </div>
@@ -154,10 +145,10 @@
 <h2>Additional terms used for reconstruction and simulation<a class="headerlink" href="#additional-terms-used-for-reconstruction-and-simulation" title="Permalink to this heading">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">parents</dt>
-<dd class="field-odd"><p>The files that this file was produced from</p>
+<dd class="field-odd"><p>[The files that this file was produced from, you need to declare parents when making child files]</p>
 </dd>
 <dt class="field-even">children</dt>
-<dd class="field-even"><p>list of files that are derived from this file</p>
+<dd class="field-even"><p>[list of files that are derived from this file - autogenerated when you declare the child as having parents]</p>
 </dd>
 <dt class="field-odd">dune.campaign</dt>
 <dd class="field-odd"><p>A big scale activity used for production - examples are PDSPProd4a and fd_mc_2023a_reco2</p>
@@ -172,12 +163,36 @@
 <dd class="field-even"><p>a description of the workflow that produced this file</p>
 </dd>
 <dt class="field-odd">dune.output_status</dt>
-<dd class="field-odd"><p>this should be confirmed - this tells you that the output exists</p>
+<dd class="field-odd"><p>the should be confirmed - this tells you that the output exists</p>
+</dd>
+<dt class="field-even">core.application.family</dt>
+<dd class="field-even"><p>broad description of the application (art/edepsim)</p>
+</dd>
+<dt class="field-odd">core.application.name</dt>
+<dd class="field-odd"><p>the specific application, reco1/reco2/detsim…</p>
+</dd>
+<dt class="field-even">core.application.version</dt>
+<dd class="field-even"><p>the DUNESW version</p>
+</dd>
+<dt class="field-odd">dune.config_file</dt>
+<dd class="field-odd"><p>the top leve fcl file used</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="monte-carlo-specific-terms">
+<h2>Monte Carlo specific terms<a class="headerlink" href="#monte-carlo-specific-terms" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">dune.requestid</dt>
+<dd class="field-odd"><p>the service-now ticket for the mc request</p>
 </dd>
 <dt class="field-even">dune_mc.gen_fcl_filename</dt>
 <dd class="field-even"><p>tells you the generator fcl file so you know what kind of mc it is.</p>
 </dd>
+<dt class="field-odd">dune_mc.geometry_version</dt>
+<dd class="field-odd"><p>the geometry version used</p>
+</dd>
 </dl>
+<p>there may be others in future.</p>
 </div>
 </div>
 
@@ -194,6 +209,7 @@
 <li><a class="reference internal" href="#">Glossary</a><ul>
 <li><a class="reference internal" href="#minimal-terms-for-raw-data">Minimal terms for raw data</a></li>
 <li><a class="reference internal" href="#additional-terms-used-for-reconstruction-and-simulation">Additional terms used for reconstruction and simulation</a></li>
+<li><a class="reference internal" href="#monte-carlo-specific-terms">Monte Carlo specific terms</a></li>
 </ul>
 </li>
 </ul>
