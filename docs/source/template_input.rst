@@ -20,7 +20,7 @@ Any additional attributes added to other existing categories require notificatio
 so we can back-declare them to SAM.
 Any new categories require approval from admin.
 ProtoDUNE NP04 can't generate core.application.* they are excused from doing that.
-Minerva is allowed to add core.group, core.lum_block_ranges, misc.file_partition, online.triggerconfig, online.triggertype
+Minerva is allowed to add core.group, core.lum_block_ranges, misc.file_partition, online.triggerconfig, online.triggertype, core.dqc_quality, dune.mx2x2_global_run_numbers
 
 Metacat version
 ^^^^^^^^^^^^^^^
