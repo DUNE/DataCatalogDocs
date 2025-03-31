@@ -60,6 +60,7 @@ Additional terms used for reconstruction and simulation
 :core.application.family: broad description of the application (art/edepsim)
 :core.application.name: the specific application, reco1/reco2/detsim...
 :core.application.version: the DUNESW version
+:origin.applications.config_files: dictionary describing the fcl files for a processing chain. 
 
 
 Minimal Monte Carlo terms
