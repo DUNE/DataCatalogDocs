@@ -47,8 +47,8 @@
 <span id="id1"></span><h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this heading">¶</a></h1>
 <p>Incomplete list of keys used</p>
 <p><strong>Keys must be lower case</strong>  values can be either.</p>
-<div class="section" id="minimal-terms-for-raw-data">
-<h2>Minimal terms for raw data<a class="headerlink" href="#minimal-terms-for-raw-data" title="Permalink to this heading">¶</a></h2>
+<div class="section" id="minimal-terms-for-raw-and-processed-data">
+<h2>Minimal terms for raw and processed data<a class="headerlink" href="#minimal-terms-for-raw-and-processed-data" title="Permalink to this heading">¶</a></h2>
 <p><cite>[]</cite> denotes fields automatically filled in by the system</p>
 <dl class="field-list simple">
 <dt class="field-odd">name</dt>
@@ -96,47 +96,36 @@
 <dt class="field-odd">metadata</dt>
 <dd class="field-odd"><p>description of file contents with this content</p>
 </dd>
-<dt class="field-even">core.data_stream</dt>
-<dd class="field-even"><p>type of data taking (commissioning, calibration, test, physics, cosmics)</p>
+</dl>
+<div class="section" id="generally-required">
+<h3>generally required<a class="headerlink" href="#generally-required" title="Permalink to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">core.data_stream</dt>
+<dd class="field-odd"><p>type of data taking (commissioning, calibration, test, physics, cosmics)</p>
 </dd>
-<dt class="field-odd">core.data_tier</dt>
-<dd class="field-odd"><p>type of data (raw, g4, )</p>
-</dd>
-<dt class="field-even">core.end_time</dt>
-<dd class="field-even"><p>unix UTC time at which the process that created the file ended -</p>
+<dt class="field-even">core.data_tier</dt>
+<dd class="field-even"><p>type of data, generally indicates steps in a processing sequence (raw, g4, )</p>
 </dd>
 <dt class="field-odd">core.event_count</dt>
 <dd class="field-odd"><p>number of events in the file</p>
 </dd>
-<dt class="field-even">core.events</dt>
-<dd class="field-even"><p>[list of events in the file],</p>
+<dt class="field-even">core.file_content_status</dt>
+<dd class="field-even"><p>status of the file - default is “good”</p>
 </dd>
-<dt class="field-odd">core.file_content_status</dt>
-<dd class="field-odd"><p>status of the file - default is “good”</p>
+<dt class="field-odd">core.file_format</dt>
+<dd class="field-odd"><p>format of the data (hdf5, root)</p>
 </dd>
-<dt class="field-even">core.file_format</dt>
-<dd class="field-even"><p>format of the data (hdf5, root)</p>
+<dt class="field-even">core.file_type</dt>
+<dd class="field-even"><p>flag to tell mc from data, (detector or mc)</p>
 </dd>
-<dt class="field-odd">core.file_type</dt>
-<dd class="field-odd"><p>flag to tell mc from data, (detector or mc)</p>
+<dt class="field-odd">core.run_type</dt>
+<dd class="field-odd"><p>which detector took the data “protodune-sp, hd-fardet …”</p>
 </dd>
-<dt class="field-even">core.first_event_number</dt>
-<dd class="field-even"><p>first event number</p>
+<dt class="field-even">core.runs</dt>
+<dd class="field-even"><p>[list of runs]</p>
 </dd>
-<dt class="field-odd">core.last_event_number</dt>
-<dd class="field-odd"><p>last event number</p>
-</dd>
-<dt class="field-even">core.run_type</dt>
-<dd class="field-even"><p>which detector took the data “protodune-sp, hd-fardet …”</p>
-</dd>
-<dt class="field-odd">core.runs</dt>
-<dd class="field-odd"><p>[list of runs]</p>
-</dd>
-<dt class="field-even">core.runs_subruns</dt>
-<dd class="field-even"><p>[list of subruns in run*100000+subrun format]</p>
-</dd>
-<dt class="field-odd">core.start_time</dt>
-<dd class="field-odd"><p>unix UTC time at which the process that created the file started</p>
+<dt class="field-odd">core.runs_subruns</dt>
+<dd class="field-odd"><p>[list of subruns in run*100000+subrun format]</p>
 </dd>
 <dt class="field-even">retention.status</dt>
 <dd class="field-even"><p>should be “active” flag to tell if the file is being used and should be retained</p>
@@ -145,6 +134,27 @@
 <dd class="field-odd"><p>flag used to determine retention status (physics, test,  …)</p>
 </dd>
 </dl>
+</div>
+<div class="section" id="optional-but-useful">
+<h3>optional but useful<a class="headerlink" href="#optional-but-useful" title="Permalink to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd"><em>core.start_time</em></dt>
+<dd class="field-odd"><p>unix UTC time at which the process that created the file started</p>
+</dd>
+<dt class="field-even"><em>core.end_time</em></dt>
+<dd class="field-even"><p>unix UTC time at which the process that created the file ended -</p>
+</dd>
+<dt class="field-odd"><em>core.events</em></dt>
+<dd class="field-odd"><p>[list of events in the file], not useful for multiple runs</p>
+</dd>
+<dt class="field-even"><em>core.first_event_number</em></dt>
+<dd class="field-even"><p>first event number</p>
+</dd>
+<dt class="field-odd"><em>core.last_event_number</em></dt>
+<dd class="field-odd"><p>last event number</p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="additional-terms-used-for-reconstruction-and-simulation">
 <h2>Additional terms used for reconstruction and simulation<a class="headerlink" href="#additional-terms-used-for-reconstruction-and-simulation" title="Permalink to this heading">¶</a></h2>
@@ -230,7 +240,11 @@
     <h3><a href="index.html">Table of Contents</a></h3>
     <ul>
 <li><a class="reference internal" href="#">Glossary</a><ul>
-<li><a class="reference internal" href="#minimal-terms-for-raw-data">Minimal terms for raw data</a></li>
+<li><a class="reference internal" href="#minimal-terms-for-raw-and-processed-data">Minimal terms for raw and processed data</a><ul>
+<li><a class="reference internal" href="#generally-required">generally required</a></li>
+<li><a class="reference internal" href="#optional-but-useful">optional but useful</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#additional-terms-used-for-reconstruction-and-simulation">Additional terms used for reconstruction and simulation</a></li>
 <li><a class="reference internal" href="#minimal-monte-carlo-terms">Minimal Monte Carlo terms</a></li>
 <li><a class="reference internal" href="#mc-terms-specific-to-particular-detectors">MC terms specific to particular detectors</a></li>
