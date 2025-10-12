@@ -25,16 +25,24 @@ Contents
 .. toctree::
 
     Intro
-    sam2metacat
-    metadatameaning
+    OfficialDataCatalog
+    setup
+    MetacatQueryExamples
     glossary
     template_input
     reco
     mcreco
     runInfo
-    OlderSam
     related
     Notes
     Ack
 
+Old Sam Documentation
+---------------------
+
+.. toctree::
+
+   sam2metacat
+   metadatameaning
+   OlderSam
     
