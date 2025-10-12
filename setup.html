@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setting up metacat &#8212; DataCatalogDocs 0.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="canonical" href="https://dune.github.io/DataCatalogDocs/setup.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Metacat Query examples" href="MetacatQueryExamples.html" />
+    <link rel="prev" title="The official DUNE data catalog supported by the production team" href="OfficialDataCatalog.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="MetacatQueryExamples.html" title="Metacat Query examples"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="OfficialDataCatalog.html" title="The official DUNE data catalog supported by the production team"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">DataCatalogDocs 0.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Setting up metacat</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="setting-up-metacat">
+<h1>Setting up metacat<a class="headerlink" href="#setting-up-metacat" title="Permalink to this heading">¶</a></h1>
+<div class="section" id="get-metacat-started">
+<h2>Get metacat started<a class="headerlink" href="#get-metacat-started" title="Permalink to this heading">¶</a></h2>
+<p>First find the documentation:</p>
+<p><a class="reference external" href="https://metacat.readthedocs.io/en/latest/index.html">https://metacat.readthedocs.io/en/latest/index.html</a></p>
+<p>metacat is a <cite>ups</cite> (SL7) and <cite>spack</cite> (AL9) product so you can get it by</p>
+<p>(SL7)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>setup<span class="w"> </span>metacat
+</pre></div>
+</div>
+<p>or (AL9)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spack<span class="w"> </span>load<span class="w"> </span>metacat
+</pre></div>
+</div>
+<p>but you can also do a local install using:</p>
+<p><a class="reference external" href="https://metacat.readthedocs.io/en/latest/ui.html#installation">https://metacat.readthedocs.io/en/latest/ui.html#installation</a></p>
+<p>Make certain you can point to the metacat server:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">METACAT_AUTH_SERVER_URL</span><span class="o">=</span>https://metacat.fnal.gov:8143/auth/dune
+<span class="nb">export</span><span class="w"> </span><span class="nv">METACAT_SERVER_URL</span><span class="o">=</span>https://metacat.fnal.gov:9443/dune_meta_prod/app
+</pre></div>
+</div>
+<p>Then authenticate to metacat using your FNAL username and services password:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>metacat<span class="w"> </span>auth<span class="w"> </span>login<span class="w"> </span>-m<span class="w"> </span>password<span class="w"> </span><span class="nv">$USER</span>
+Password:
+User:<span class="w">    </span>schellma
+Expires:<span class="w"> </span>Thu<span class="w"> </span>Oct<span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">16</span>:27:29<span class="w"> </span><span class="m">2022</span>
+</pre></div>
+</div>
+<p>See the <a class="reference external" href="https://metacat.readthedocs.io/en/latest/ui.html#user-authentication">metacat documentation</a> for other authentication methods such as tokens.</p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Setting up metacat</a><ul>
+<li><a class="reference internal" href="#get-metacat-started">Get metacat started</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="OfficialDataCatalog.html"
+                          title="previous chapter">The official DUNE data catalog supported by the production team</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="MetacatQueryExamples.html"
+                          title="next chapter">Metacat Query examples</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/setup.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="MetacatQueryExamples.html" title="Metacat Query examples"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="OfficialDataCatalog.html" title="The official DUNE data catalog supported by the production team"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">DataCatalogDocs 0.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Setting up metacat</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Fermi National Accelerator Laboratory.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+  </body>
+</html>
