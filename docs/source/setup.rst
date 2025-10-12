@@ -45,6 +45,6 @@ Then authenticate to metacat using your FNAL username and services password:
   User:    schellma
   Expires: Thu Oct 13 16:27:29 2022
 
-See the `metacat documentation https://metacat.readthedocs.io/en/latest/ui.html#user-authentication`_ for other authentication methods such as tokens.
+See the `metacat documentation <https://metacat.readthedocs.io/en/latest/ui.html#user-authentication>`_ for other authentication methods such as tokens.
 
 
