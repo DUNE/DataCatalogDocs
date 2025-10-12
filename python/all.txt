@@ -1,0 +1,375 @@
+H. Schellman, July 6, 2023
+
+This is an annotated list of sam parameters and their  values found in production files created between 2018 and 2023.  
+
+
+
+* user - REQUIRED - the FNAL username for the creator of the file
+    - dunepro
+
+* file_type - REQUIRED - used to tell mc from real data 
+    - detector
+    - mc
+    - unknown
+
+* file_format - REQUIRED - information on the format to help read it
+    - artroot
+    - unknown
+    - root
+    - hdf5
+    - binary
+
+* data_tier - REQUIRED - what level of data is this
+    - full-reconstructed
+    - raw
+    - simulated
+    - detector-simulated
+    - hit-reconstructed
+    - pandora_info
+    - reco-recalibrated
+    - root-tuple-virtual
+
+* application - REQUIRED for all but raw data
+    - {'family': 'art', 'name': 'reco', 'version': 'v07_08_00_04'}
+    - {'family': 'art', 'name': 'dune-artdaq', 'version': 'v1_16_00b'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v08_03_00'}
+    - {'family': 'art', 'name': 'g4', 'version': 'v08_03_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v07_08_00_05'}
+    - {'family': 'art', 'name': 'detsim', 'version': 'v08_03_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'development'}
+    - {'family': 'art', 'name': 'larsoft', 'version': 'v07_11_00'}
+    - {'family': 'art', 'name': 'g4', 'version': 'v07_04_00'}
+    - {'family': 'art', 'name': 'detsim', 'version': 'v07_04_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v07_07_00_01'}
+    - {'family': 'art', 'name': 'detsim', 'version': 'v08_07_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v08_07_00'}
+    - {'family': 'art', 'name': 'dune-artdaq', 'version': 'v2019_11_25_develop_fixed_crtgen'}
+    - {'family': 'art', 'name': 'garsoft', 'version': 'v02_04_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v08_35_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v08_27_01_01'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v08_33_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v08_38_01'}
+    - {'family': 'art', 'name': 'dune-artdaq', 'version': 'v2019_10_31_pdune_e17_s83'}
+    - {'family': 'art', 'name': 'dune-artdaq', 'version': 'v2019_08_29_develop_self_trigger_and_felix'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v08_37_00'}
+    - {'family': 'art', 'name': 'detsim', 'version': 'v08_48_01'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v08_48_01'}
+    - {'family': 'genie', 'name': 'ghep', 'version': 'v2_12_10c'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v08_55_01'}
+    - {'family': 'art', 'name': 'detsim', 'version': 'v08_55_02'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v08_55_02'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v08_59_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v08_57_00'}
+    - {'family': 'art', 'name': 'detsim', 'version': 'v08_57_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v08_62_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_03_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_09_01'}
+    - {'family': 'art', 'name': 'detsim', 'version': 'v09_09_01'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_10_02'}
+    - {'family': 'art', 'name': 'detsim', 'version': 'v09_17_01'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_17_01'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_22_03_01'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_30_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_32_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_35_00_01'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_37_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_42_04_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_44_00_02'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_46_00_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_47_00_01'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_49_00d00'}
+    - {'family': 'art', 'name': 'detsim', 'version': 'v09_52_00d00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_53_00d02'}
+    - {'family': 'protoduneana', 'name': 'pdspana', 'version': 'v09_52_00d00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_58_02d00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_58_01d00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_63_00d00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_36_00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_63_01d00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_64_01d00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_67_00d00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_69_01d00'}
+    - {'family': 'art', 'name': 'reco', 'version': 'v09_72_00d00'}
+
+* data_stream - REQUIRED  FOR DATA - based on trigger and used to determine data lifetimes.
+    - cosmics
+    - test
+    - noise
+    - out1
+    - physics
+    - calibration
+    - study
+
+* run_type - REQUIRED - what experiment/DAQ took this data
+    - protodune-sp
+    - physics
+    - None
+    - neardet
+    - fardet-sp
+    - protodune-dp
+    - fardet-vd
+    - vd-coldbox-top
+    - fardet-hd
+    - dc4-vd-coldbox-bottom
+
+*create_time - REQUIRED
+
+The rest of these are more experiment specific
+
+* detector.hv_value - protoDUNE hv in kV
+    - 180
+    - 0
+    - 144
+    - 130
+    - 140
+    - 38
+    - 77
+    - 150
+    - 160
+    - 175
+    - 126
+    - 162
+    - 108
+    - 90
+    - 72
+    - 54
+    - 18
+    - 36
+    - 120
+    - 170
+    - 135
+    - 45
+
+* dune-raw-data.version - raw data format version 
+    - v1_17_06a
+    - v2019_08_29_for_dune-artdaq_self_trigger_and_felix
+    - v2019_10_31_pdune_e17_s83
+
+* DUNE.campaign - RECOMMENDED - helps distinguish major processing campaigns.  Often used in selection 
+    - mcc11
+    - MCC11
+    - trj_mpd_dec2019
+    - NERSCtest
+    - keepup_v08_27_01
+    - NP02_run2019
+    - keep_recob_v08_38_01
+    - MC_Fall2019
+    - PDSPProd3
+    - mtanaz_mpdactive_nov2019
+    - mtanaz_mpd_ecal_nonactive_nov2019
+    - keepup_v08_48_01
+    - keepup_v08_55_01
+    - MC_Summer2020
+    - NP02_keepup_Summer2020
+    - GPUaaS_RITM0997258
+    - diffusion_RITM0986948
+    - PDSPProd4
+    - MC_Winter2021
+    - NP02_keepup_March2021
+    - RITM1103733
+    - PDSPProd4a
+    - diffusion_RITM1131173
+    - MC_Summer2021
+    - RITM1147082
+    - MC_Fall2021
+    - PDSPProd4a_SCEsyst
+    - FDVDProd1
+    - RITM1312299
+    - RITM1331650
+    - VD_coldbox_TDE_2021
+    - RITM1331140
+    - RITM1355274
+    - MC_Winter2022
+    - RITM1382619
+    - dc4
+    - FDHDSNProd1
+    - FDVDProd2
+    - FDVDProd2_test
+    - PerlmutterTest_RITM1479848
+    - FDHDSNProd1v2
+    - AlternateSCE_RITM1506913
+    - NP02_keepup_March2022
+    - VD_coldbox_CRP2_CRP3_2022
+    - RITM1557373
+    - MC_Winter2023_RITM1592444_reReco
+    - RITM1632937_test
+    - RITM1632937
+
+* DUNE.production_status - USEFUL. - can avoid test campaigns
+    - final
+    - test
+
+* DUNE_MC.detector_type - USEFUL - redundant with run_type
+    - protoDUNE SP
+
+* DUNE_MC.electron_lifetime - USEFUL 
+    - 3ms
+    - 35ms
+
+* DUNE_MC.with_cosmics - USEFUL
+    - 1
+
+* MC.with_cosmics - USEFUL
+    - 1
+
+* detector.hv_status - USEFUL 
+    - 1
+
+* DUNE.requestid - RECOMMENDED for campaigns to match request, 
+    - RITM0720289
+    - RITM0986948
+    - RITM0998939
+    - RITM0993763
+    - RITM0892689
+    - RITM1020527
+    - RITM1036677
+    - RITM1086087
+    - RITM1115963
+    - RITM1129142
+    - RITM1146449
+    - RITM1150297
+    - RITM1149890
+    - RITM1147082
+    - RITM1187486
+    - RITM1188410
+    - RITM1202507
+    - RITM1251140
+    - RITM1268625
+    - RITM1276306
+    - RITM1331650
+    - RITM1331140
+    - RITM1355274
+    - RITM1464893
+    - RITM1457487
+    - RITM1479848
+    - RITM1557373
+    - RITM1592444
+    - RITM1632937
+    - RITM1648093
+
+* DUNE.generators - REQUIRED FOR MC
+    - GENIE
+
+* DUNE_MC.beam_flux_ID - USEFUL FOR MC
+    - 1
+
+* DUNE_MC.geometry_version - USEFUL for MC
+    - MPD_ECalOctagon_60l_UniformMagnet.gdml
+    - nd_hall_only_mpd.gdml
+    - nd_hall_only_mpd_antifid.gdml
+
+* DUNE_MC.name - ??
+    - nue_dec2019_mpd_tpc_g4lbne_v3r2p4b_FHC_ND_RIK
+    - nu_nov2019_mpdactive_g4lbne_v3r2p4b_FHC_ND
+    - nu_nov2019_mpd_ecal_nonactive_g4lbne_v3r2p4b_FHC_ND
+
+* DUNE_MC.neutrino_flavors - USEFUL for MC
+    - 12, -12
+    - 12, -12, 14, -14
+
+* DUNE_MC.TopVolume - Not certain what this is 
+    - volGArTPC
+
+* LBNF_MC.HornCurrent - USEFUL for MC
+    - 300.0
+
+* NearDetector_MC.OffAxisPosition - USEFUL for data/MC
+    - 0.0
+
+* beam.momentum - IS this momentum or energy? 
+    - 1.0
+    - 7.0
+    - 0.3
+    - 6.0
+    - 2.0
+    - 0.5
+    - 3.0
+
+* beam.polarity - USEFUL needs definition
+    - 1
+
+* DUNE_MC.beam_energy IS this momentum or energy? 
+
+    - 1.0
+    - 2.0
+    - 3.0
+    - 7.0
+    - 0.5
+    - 6.0
+    - 0.3
+
+* DUNE_MC.liquid_flow - USEFUL - SHOULD BE YES/NO
+    - no
+
+* DUNE_MC.space_charge - USEFUL 
+    - no
+    - yes
+
+* Not documented for data?  - SCE on/off
+
+* MC.liquid_flow - USEFUL SHOULD BE YES/NO
+    - no
+
+* MC.space_charge - USEFUL SHOULD BE YES/NO
+    - no
+    - yes
+
+* data_quality.online_good_run_list - USEFUL 
+    - 1
+
+* DUNE_MC.generators - REQUIRED for MC
+    - beam_cosmics
+    - beam_cosmics_datadriven
+    - genie_nu_numu2nutau_nue2numu
+    - genie_nu
+    - genie_nu_numu2nue_nue2nutau
+    - genie_anu
+    - genie_anu_numu2nutau_nue2numu
+    - genie_anu_numu2nue_nue2nutau
+    - marley
+    - NNBarAtm_hA_BR
+    - NNBarAtm_hA_LFG
+    - NNBarAtm_hA_ESF
+    - NNBarAtm_hN_BR
+    - NNBarAtm_hN_LFG
+    - NNBarAtm_hN_ESF
+    - protondecay_hA_LocalFG
+    - protondecay_hA_BodekRitchie
+    - protondecay_hN_LocalFG
+    - protondecay_hN_BodekRitchie
+    - protondecay_hA_EffSF
+    - protondecay_hN_EffSF
+    - legacynnbar_hA_LocalFG
+    - legacynnbar_hA_EffSF
+    - legacynnbar_hN_BodekRitchie
+    - legacynnbar_hN_LocalFG
+    - legacynnbar_hN_EffSF
+    - legacynnbar_hA_BodekRitchie
+    - scalar_Ar_m05_b10_G19_00a_20220302T020738
+    - scalar_Ar_m05_b1p1_G19_01a_20220302T043327
+
+* art.variation - USEFUL 
+    - es
+    - NoRawDigits
+    - WithRawDigits
+
+* DUNE.fcl_name - RECOMMENDED
+    - pduneana_Prod4a_MC_sce_6GeV.fcl
+
+* DUNE.fcl_path - RECOMMENDED
+    - /cvmfs/dune.opensciencegrid.org/products/dune/protoduneana/v09_52_00d00/job
+
+* DUNE.fcl_version_tag - USEFUL to know the fcl version 
+    - v09_52_00d00
+
+* dataset.tag. - no idea what this is
+    - poms_depends_435657_1
+    - poms_depends_438864_1
+    - poms_depends_457089_1
+
+* DUNE.poms_campaign_id  - USEFUL for followup
+    - 2724
+
+
+
+

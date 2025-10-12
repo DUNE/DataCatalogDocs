@@ -1,0 +1,48 @@
+Metacat,type,Samweb
+,,
+Basics,,
+,,
+fid,int,file_id
+namespace,string, 
+name,string,file_name
+creator,string,user
+created_timestamp,timestamp,create_date
+size,int,file_size
+checksums,dictionary,check_sum (dict)
+retired,bool, 
+retired_by,string, 
+retired_timestamp,timestamp, 
+updated_by,string,update_user
+updated_timestamp,timestamp,update_date
+update_comment,blob, 
+,,
+Core attributes,,
+,,
+core.application.version,string,app_family
+core.application.family,string,app_version
+core.application.name,string,app_name
+core.event_count,int,event_count
+core.first_event_number,int,first_event
+core.last_event_number,int,last_event
+core.start_time,timestamp,start_time
+core.end_time,timestamp,end_time
+core.file_content_status,string,content_status 
+core.data_stream,string,data_stream
+core.data_tier,string,data_tier
+core.events,array, 
+core.file_type,text,file_type
+core.file_format,text,file_format
+core.run_type,text,run_type
+core.runs,array,run_number (integer part)
+core.runs_subruns,array,run_number (part past the decimal point)
+core.raw_timestamp,timestamp, 
+,,
+dune_mc.*, all types, DUNE_MC.*
+Retention/access keys,, 
+,,
+retention.status,string,
+retention.class,string,
+,,
+Additional attributes,,
+,,
+<category>.<subcategory>.<name> … ,"string,int, bool, ….",<category>.<name>

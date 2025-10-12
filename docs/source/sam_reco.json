@@ -1,0 +1,63 @@
+{
+    "file_name": "np04_raw_run005141_0002_dl2_reco1_18126921_0_20210318T103516Z.root",
+    "file_id": 52500057,
+    "create_date": "2021-03-19T16:08:14+00:00",
+    "user": "dunepro",
+    "update_date": "2021-10-05T15:05:46+00:00",
+    "update_user": "dunepro",
+    "file_size": 3690769125,
+    "checksum": [
+     "enstore:1952172898",
+     "adler32:03d6cb63",
+     "md5:9c9d59cc33f3b0e2167c2acb3228241e"
+    ],
+    "content_status": "good",
+    "file_type": "detector",
+    "file_format": "artroot",
+    "data_tier": "full-reconstructed",
+    "application": {
+     "family": "art",
+     "name": "reco",
+     "version": "v09_09_01"
+    },
+    "process_id": 15256421,
+    "event_count": 108,
+    "first_event": 1584,
+    "last_event": 3028,
+    "start_time": "2021-03-18T10:56:42+00:00",
+    "end_time": "2021-03-19T15:46:57+00:00",
+    "data_stream": "physics",
+    "art.file_format_era": "ART_2011a",
+    "art.file_format_version": 13.0,
+    "art.first_event": 1584.0,
+    "art.last_event": 3028.0,
+    "art.process_name": "Reco1",
+    "art.run_type": "protodune-sp",
+    "beam.momentum": 7.0,
+    "data_quality.online_good_run_list": 1,
+    "detector.hv_value": 180,
+    "DUNE.campaign": "PDSPProd4",
+    "DUNE_data.acCouple": 0,
+    "DUNE_data.calibpulsemode": 0,
+    "DUNE_data.DAQConfigName": "np04_WibsReal_Ssps_BeamTrig_00021",
+    "DUNE_data.febaselineHigh": 2,
+    "DUNE_data.fegain": 2,
+    "DUNE_data.feleak10x": 0,
+    "DUNE_data.feleakHigh": 1,
+    "DUNE_data.feshapingtime": 2,
+    "DUNE_data.inconsistent_hw_config": 0,
+    "DUNE_data.is_fake_data": 0,
+    "runs": [
+     [
+      5141,
+      1,
+      "protodune-sp"
+     ]
+    ],
+    "parents": [
+     {
+      "file_name": "np04_raw_run005141_0002_dl2.root",
+      "file_id": 6605772
+     }
+    ]
+   }

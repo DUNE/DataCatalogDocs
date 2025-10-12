@@ -1,0 +1,78 @@
+{
+    "checksums": {
+        "adler32": "2ecd0e98"
+    },
+    "children": [
+        {
+            "fid": "n8OUCNB8Rz6Gb9uS",
+            "name": "nu_dune10kt_1x2x6_1427_768_20230827T213411Z_gen_g4_detsim_hitreco__20240405T212128Z_reco2_ana.root",
+            "namespace": "fardet-hd"
+        }
+    ],
+    "created_timestamp": 1712356547.182858,
+    "creator": "dunepro",
+    "fid": "4kDVdRLgTuSssgkD",
+    "metadata": {
+        "art.file_format_era": "ART_2011a",
+        "art.file_format_version": 15,
+        "art.first_event": 76801,
+        "art.last_event": 76900,
+        "art.process_name": "Reco2",
+        "core.application": "art.reco2",
+        "core.application.family": "art",
+        "core.application.name": "reco2",
+        "core.application.version": "v09_81_00d02",
+        "core.data_stream": "out1",
+        "core.data_tier": "full-reconstructed",
+        "core.end_time": "2024-04-05T22:31:22",
+        "core.event_count": 100,
+        "core.file_format": "artroot",
+        "core.file_type": "mc",
+        "core.first_event_number": 76801,
+        "core.group": "dune",
+        "core.last_event_number": 76900,
+        "core.run_type": "fardet-hd",
+        "core.runs": [
+            1427
+        ],
+        "core.runs_subruns": [
+            142700001
+        ],
+        "core.start_time": "2024-04-05T21:22:54",
+        "dune.campaign": "fd_mc_2023a_reco2",
+        "dune.config_file": "standard_reco2_dune10kt_nu_1x2x6.fcl",
+        "dune.output_status": "confirmed",
+        "dune.requestid": "ritm1780305",
+        "dune.workflow": {
+            "cpuinfo": "AMD EPYC 7763 64-Core Processor",
+            "hostname": "heplnc164.pp.rl.ac.uk",
+            "job_id": "189271.98@justin-prod-sched01.dune.hep.ac.uk",
+            "jobscript_cpu_seconds": 3743,
+            "jobscript_finish": 1712356520,
+            "jobscript_real_seconds": 4439,
+            "jobscript_start": 1712352080,
+            "os_release": "Scientific Linux release 7.9 (Nitrogen)",
+            "site_name": "UK_RAL-PPD",
+            "stage_id": 1,
+            "user": "benjamin@fnal.gov",
+            "workflow_id": 1769
+        },
+        "dune_mc.detector_type": "fardet-hd",
+        "dune_mc.gen_fcl_filename": "prodgenie_nu_dune10kt_1x2x6.fcl"
+    },
+    "name": "nu_dune10kt_1x2x6_1427_768_20230827T213411Z_gen_g4_detsim_hitreco__20240405T212128Z_reco2.root",
+    "namespace": "fardet-hd",
+    "parents": [
+        {
+            "fid": "80286097",
+            "name": "nu_dune10kt_1x2x6_1427_768_20230827T213411Z_gen_g4_detsim_hitreco.root",
+            "namespace": "fardet-hd"
+        }
+    ],
+    "retired": false,
+    "retired_by": null,
+    "retired_timestamp": null,
+    "size": 1763366388,
+    "updated_by": "dunepro",
+    "updated_timestamp": 1712510605.16971
+}

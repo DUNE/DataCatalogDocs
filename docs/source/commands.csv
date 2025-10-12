@@ -1,0 +1,5 @@
+﻿metacat,samweb,comment
+metacat query 'files from dnamespace:dataset where  x=y',samweb list-files ' x y ',
+??,samweb list-files --summary 'x y',
+metacat file show -m <namespace>:<filename>,samweb get-metadata <filename>,
+metacat query 'files from dune:all with name=<filename>',,finds the namespace

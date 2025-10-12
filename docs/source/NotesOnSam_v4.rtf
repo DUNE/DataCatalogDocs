@@ -1,0 +1,713 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\fswiss\fcharset0 Arial-BoldMT;\f2\froman\fcharset0 TimesNewRomanPSMT;
+\f3\fswiss\fcharset0 Arial-ItalicMT;\f4\fswiss\fcharset0 Arial-BoldItalicMT;\f5\froman\fcharset0 TimesNewRomanPS-BoldMT;
+\f6\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red51\green51\blue51;\red17\green85\blue204;\red179\green36\blue37;
+\red32\green33\blue34;}
+{\*\expandedcolortbl;;\csgenericrgb\c20000\c20000\c20000;\csgenericrgb\c6667\c33333\c80000;\csgenericrgb\c70196\c14118\c14510;
+\csgenericrgb\c12549\c12941\c13333;}
+\margl1440\margr1440\vieww12240\viewh15100\viewkind1
+\deftab720
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\fs40 \cf0 \sub  \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f1\b\fs36 \cf0 \nosupersub Notes on the SAM data catalog system
+\f0\b0\fs24 \
+ \
+H. Schellman 1-28-2020 - updated Dec 2021\
+ \
+SAM is a data catalog originally designed for the D0 and CDF high energy physics experiments at Fermilab.  It is now used by most of the Intensity Frontier experiments at Fermilab. \
+ \
+The most important objects cataloged in SAM are individual 
+\f1\b files
+\f0\b0  and collections of files called 
+\f1\b datasets
+\f0\b0 .\
+ \
+Data files themselves are not stored in SAM, their metadata is, and that metadata allows you to search for and find the actual physical files.  Sam also provides mechanisms for initiating and tracking file delivery through 
+\f1\b projects
+\f0\b0 . \
+ \
+\pard\pardeftab720\ri0\sl276\slmult1\sb360\sa80\partightenfactor0
+
+\f1\b\fs34 \cf0 General considerations\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\b0\fs24 \cf0  \
+SAM was designed to ensure that large scale data-processing was done completely and accurately which leads to some features not always present in a generic catalog but very desirable if one wishes high standards of reproducibility and documentation in data analysis.\
+ \
+For example, at the time of the original design, the main storage medium was 8mm tapes using consumer-grade drives.  Drive and tape failure rates were > 1%.  Several SAM design concepts, notably luminosity blocks and parentage tracking, were introduced to allow accurate tracking of files and their associated normalization in a high error-rate environment. \
+  \
+\pard\pardeftab720\li720\ri0\sl276\slmult1\partightenfactor0
+\cf0 \'b7
+\f2\fs14       
+\f0\fs24 Description of the contents of data collections to allow later retrieval \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\cf0  \
+\pard\pardeftab720\li720\ri0\sl276\slmult1\partightenfactor0
+\cf0 \'b7
+\f2\fs14       
+\f0\fs24 Tracking of 
+\f3\i object and collection
+\f0\i0  parentage and description of processing transformations to document the full provenance of any data 
+\f1\b object
+\f0\b0  and ensure accurate normalization\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\cf0  \
+\pard\pardeftab720\li720\ri0\sl276\slmult1\partightenfactor0
+\cf0 \'b7
+\f2\fs14       
+\f0\fs24 Grouping of 
+\f3\i objects and collection
+\f0\i0  into larger 
+\f1\b \'93datasets
+\f0\b0 \'94 based on their characteristics\
+ \
+\'b7
+\f2\fs14       
+\f0\fs24 Storing 
+\f4\i\b physical
+\f1\i0  location
+\f0\b0  
+\f3\i of objects\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\i0 \cf0  \
+\pard\pardeftab720\li720\ri0\sl276\slmult1\partightenfactor0
+\cf0 \'b7
+\f2\fs14       
+\f0\fs24 Tracking of the processing of 
+\f3\i collections
+\f0\i0  to allow reprocessing on failure and avoid double processing.\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\cf0  \
+\pard\pardeftab720\li720\ri0\sl276\slmult1\partightenfactor0
+\cf0 \'b7
+\f2\fs14       
+\f0\fs24 Methods (\'93
+\f1\b projects
+\f0\b0 \'94) for delivering and tracking 
+\f3\i collections
+\f0\i0  in multi-processing jobs\
+\pard\pardeftab720\li720\ri0\sl276\slmult1\partightenfactor0
+
+\fs22 \cf0  \
+\pard\pardeftab720\li720\ri0\sl276\slmult1\partightenfactor0
+
+\fs24 \cf0 \'b7
+\f2\fs14       
+\f0\fs24 Preservation of data about processing/storage for debugging/reporting\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\cf0  \
+The first 3 goals relate to content and characteristics while the last 3 relate 
+\f3\i to data
+\f0\i0  storage and processing tools.  \
+ \
+\pard\pardeftab720\ri0\sl276\slmult1\sb360\sa80\partightenfactor0
+
+\f1\b\fs34 \cf0 Specifics\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\b0\fs24 \cf0  \
+\pard\pardeftab720\li720\ri0\sl276\slmult1\partightenfactor0
+\cf0 1.
+\f2\fs14      
+\f0\fs24 The current SAM implementation uses the file as the basic unit of information.  
+\f1\b Metadata
+\f0\b0  is associated with the file name.  Filenames must be unique in the system. This prevents duplication of data in a sample, as a second copy cannot be cataloged. This makes renaming a file very unwise. A very common practice is to include some of the metadata in the filename, both to make it easier to identify and to ensure uniqueness.    
+\f3\i \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\cf0  \
+\pard\pardeftab720\li720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\i0 \cf0 2.
+\f2\fs14    
+\f5\b   
+\f1\fs24 Metadata
+\f0\b0  for a file can include file locations but does not have to. A file can have no location at all, or many. When you move or remove a file with an associated SAM location, you need to update the location information.  \
+\pard\pardeftab720\li720\ri0\sl276\slmult1\partightenfactor0
+
+\f3\i \cf0 \
+\pard\pardeftab720\li720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\i0 \cf0 3.
+\f2\fs14      
+\f0\fs24 SAM does not move files..  It provides location information for a process to use in streaming or copying a file using its own methods. Temporary locations (such as on a grid node) need not be reported to SAM. Permanently storing or removing files requires both moving/removing the file itself and updating its metadata to reflect that location and is generally left up to special packages such as the Fermilab FTS (File Transfer Service) and SAM projects. \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\cf0   \
+\pard\pardeftab720\li720\ri0\sl276\slmult1\partightenfactor0
+\cf0 4.
+\f2\fs14      
+\f0\fs24 Files which are stored on disk or tape are expected to have appropriate file sizes and checksums. One can have duplicate instances of a file in different locations, but they must all be identical.  If one reprocesses an input file, the output may well be subtly different (for example dates stored in the file itself can change the checksum). SAM should force you to choose which version, old or new, is acceptable.  It will not let you catalog both with the same filename. As a result, if you get a named file out of SAM, you can be reasonably certain you got the right copy. \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\cf0  \
+\pard\pardeftab720\li720\ri0\sl276\slmult1\partightenfactor0
+\cf0 5.
+\f2\fs14      
+\f0\fs24 files with duplicate content but different names can be problematic. The reprocessed file mentioned in part 4, if renamed, could cause significant problems if it were allowed into the data sample along with the originals as a job processing all files might get both copies. This is one of the major reasons for the checksums and unique filenames. There is a temptation to put, for example, timestamps, in filenames to generate unique names but that removes a protection against duplication. \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\cf0   \
+\pard\pardeftab720\li720\ri0\sl276\slmult1\partightenfactor0
+\cf0 6.
+\f2\fs14      
+\f0\fs24 Files can have 
+\f1\b parents
+\f0\b0  and 
+\f1\b children
+\f0\b0  and, effectively, birth certificates that can tell you how they were made.  An example would be a set of raw data files RAWnnn processed with code X to produce a single reconstructed file RECO.  One can tell SAM that RAWnnn are the parents of RECO processed with version x of code X. If one later finds another RAWnnn file that was missed in processing, SAM can tell you it has not been processed yet with X (i.e., it has no children associated with version x of X) and you can then choose to process that file. This use case often occurs when a production job fails without reporting back or succeeds but the copy back or catalog action fails. \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\cf0  \
+The D0 experiment required that all official processing going into SAM be done with tagged releases and fixed parameter sets to increase reproducibility and the tags for that information were included in the metadata. Calibration databases were harder to timestamp so some variability was still possible if calibrations were updated.\
+ \
+7.  SAM supports several types of data description fields:\
+ \
+
+\f1\b Values
+\f0\b0  are standard across all implementations like run_type, file_size \'85\
+ \
+
+\f1\b Parameters
+\f0\b0  are defined by the experiment for example MC.Genieversion\
+ \
+Values are common to almost all  HEP experiments and are optimized for efficient queries.  SAM also allows definition of \'93parameters\'94 (by administrators) as they are needed.  This allows the schema to be modified easily as needs arrive.\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f3\i \cf0  
+\f0\i0 \
+8.  Metadata can also contain \'93spill\'94 or luminosity block information that allows a file to point to specific data taking periods with smaller granularity than a run or subrun. When files are merged, this spill information is also merged.\
+ \
+9. SAM currently does not contain a means of easily determining which file a given event is in.  If a daq system is writing multiple streams, an event from a given subrun could be in any stream.  Adding an event database would be a useful feature.\
+  \
+All of these features are intended to assure that your data are well described and can be found. As SAM stores full location information, this means any SAM-visible location. In addition, if parentage information is provided, you can determine and reproduce the full provenance of any file.\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f1\b \cf0  \
+\pard\pardeftab720\ri0\sl276\slmult1\sb360\sa80\partightenfactor0
+
+\fs34 \cf0 Datasets and projects\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\b0\fs24 \cf0  \
+
+\f1\b Datasets\
+
+\f0\b0  \
+In addition to the files themselves, SAM allows you to define datasets.\
+ \
+A SAM 
+\f1\b dataset
+\f0\b0  is \ul not a fixed list of files\ulnone  but a 
+\f1\b query 
+\f0\b0 against the SAM database. An example would be \'93data_tier reconstructed and run_number 2001 and version v10\'94 which would be all files from run 2001 that are reconstructed data produced by version v10. This dataset is dynamic. If one finds a missing file from run 2001 and reconstructs it with v10, the dataset will grow. There are also dataset 
+\f1\b snapshots
+\f0\b0  that are derived from datasets and capture the exact files in the dataset when the snapshot was made.\
+Note: most other data catalogs assume a \'93dataset\'94 is a fixed list of files.  This is a \'93snapshot\'94 in SAM. \
+
+\f1\b  \
+samweb 
+\f0\b0 \'96 samweb is the command line and python API that allows queries of the SAM metadata, creation of datasets and tools to track and deliver information to batch jobs.\
+\
+samweb can be acquired from ups via \
+\pard\pardeftab720\fi720\ri0\sl276\slmult1\partightenfactor0
+
+\f6 \cf0 setup samweb_client\
+\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0 \cf0 Or installed locally via \
+\pard\pardeftab720\li360\ri220\sl276\slmult1\sb220\sa220\partightenfactor0
+
+\f6\fs22 \cf2 git clone {\field{\*\fldinst{HYPERLINK "http://cdcvs.fnal.gov/projects/sam-web-client"}}{\fldrslt \cf3 \ul \ulc3 http://cdcvs.fnal.gov/projects/sam-web-client}}\
+\pard\pardeftab720\ri220\sl276\slmult1\sb220\sa220\partightenfactor0
+
+\f0\fs24 \cf2 You then need to do something like:\
+\pard\pardeftab720\fi720\ri0\sl276\slmult1\partightenfactor0
+
+\f6\fs20 \cf2 export  PATH=$HOME/sam-web-client/bin:$\{PATH\}\
+export  PYTHONPATH=$HOME/sam-web-client/python:$\{PYTHONPATH\}\
+export SAM_EXPERIMENT=dune\
+\pard\pardeftab720\li360\ri220\sl276\slmult1\sb220\sa220\partightenfactor0
+
+\fs24 \cf2 \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0 \cf0  \
+
+\f1\b Projects\
+ 
+\f4\i \
+
+\f0\i0\b0  \
+SAM also supports access tracking mechanisms called 
+\f1\b projects
+\f0\b0  and 
+\f1\b consumers.  
+\f0\b0 These are generally implemented for you by grid processing scripts. Your job is to choose a dataset and then ask the processing system to launch a project for that dataset.\
+ \
+A 
+\f1\b project
+\f0\b0  is effectively a processing campaign across a dataset which is owned by the SAM system. At launch a 
+\f1\b snapshot
+\f0\b0  is generated and then the files in the snapshot are delivered to a set of 
+\f1\b consumers
+\f0\b0 .  The project maintains an internal record of the status of the files and consumers. Each grid process can instantiate a consumer which is attached to the project.  Those consumers then request \'93files\'94 from the project and, when done processing, tell the project of their status.  \
+ \
+The original SAM implementation actually delivered the files to local hard drives.  Modern SAM delivers the location information and expects the consumer to find the optimal delivery method. This is a pull model, where the consuming process requests the next file rather than having the file assigned to it.  This makes the system more robust on distributed systems. \
+ \
+See running projects at \
+ \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://samweb.fnal.gov:8480/station_monitor/dune/stations/dune/projects"}}{\fldrslt \cf3 \ul \ulc3 http://samweb.fnal.gov:8480/station_monitor/dune/stations/dune/projects}}\cf3 \ul \ulc3 \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\cf0 \ulnone  \
+\pard\pardeftab720\ri0\sl276\slmult1\sb360\sa80\partightenfactor0
+
+\f1\b\fs34 \cf0 Accessing the database in read mode\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\b0\fs24 \cf0 \
+Checking the database does not require special privileges but storing files and\
+running projects modifies the database and requires authentication to the right experimental group.   kx509 authentication and membership in the experiment VO are needed. \
+ \
+Administrative actions like adding new 
+\f1\b values
+\f0\b0  are restricted to a small set of superusers for each experiment. \
+ \
+\pard\pardeftab720\ri0\sl276\slmult1\sb360\sa80\partightenfactor0
+
+\f1\b\fs34 \cf0 Suggestions for configuring SAM (for admins)\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\b0\fs24 \cf0  \
+First of all, it really is nice to have filenames and dataset names that tell you what\'92s in the box, although not required. The D0 and MINERvA conventions have been to use \'93_\'94 underscores between useful key strings. As a result, D0 and MINERvA tried not to use \'93_\'94 in metadata entries to allow cleaner parsing. \'93-\'93 is used if needed in the metadata.\
+ \
+D0 also appended processing information to filenames as they moved through the system to assure that files run through different sequences had unique identifiers.\
+ \
+Example: A Monte Carlo simulation file generated with version v3 and then reconstructed with v5 might look like\
+ \
+SIM_MC_020000_0000_simv3.root would be a parent of RECO_MC_020000_0000_simv3_recov5.root\
+Data files are all children of the raw data while simulation files sometimes have more\
+complicated ancestry, with both unique generated events and overlay events from data as parents.\
+ \
+\pard\pardeftab720\ri0\sl276\slmult1\sb360\sa80\partightenfactor0
+
+\f1\b\fs34 \cf0 Setting up SAM metadata (For admins)\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\b0\fs24 \cf0  \
+This needs to be done once, and very carefully, early in the experiment. It can grow but thinking hard at the beginning saves a lot of pain later.\
+ \
+You need to define 
+\f1\b data_tiers
+\f0\b0 . These represent the different types of data that you produced through your processing chain. Examples would be raw, pedsup, calibrated, reconstructed, thumbnail, mc-generated, mc-geant, mc-overlaid,\
+ \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f1\b \cf0 run_type
+\f0\b0  can be used to support multiple DAQ instances. \
+ \
+
+\f1\b data_stream
+\f0\b0  is often used for trigger subsamples that you may wish to split data into (for example pedestal vs data runs).\
+ \
+Generally, you want to store data from a given data_tier with other data from that tier to facilitate fast sequential access. \
+ \
+\pard\pardeftab720\ri0\sl276\slmult1\sb360\sa80\partightenfactor0
+
+\f1\b\fs34 \cf0 Applications\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\b0\fs24 \cf0  \
+It is useful, but not required to also define 
+\f1\b applications
+\f0\b0  which are triads of \'93appfamily\'94, \'93appname\'94 and \'93version\'94. Those are used to figure out what changed X to Y. There are also places to store the machine the application ran on and the start and end time for the job.\
+\
+The query:\
+ \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6 \cf0 samweb list-files "data_tier raw and not isparentof: (data_tier reconstructed and appname reco and version 7)"\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0 \cf0  \
+Should, in principle, list raw data files not yet processed by version 7 of reco to produce files of tier reconstructed. You would use this to find lost files in your reconstruction after a power outage.\
+ \
+It is good practice to also store the name of the head application configuration file for processing but this does not have a standard \'93value\'94\
+ \
+\pard\pardeftab720\ri0\sl276\slmult1\sb360\sa80\partightenfactor0
+
+\f1\b\fs34 \cf0 Example metadata from DUNE\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\b0\fs22 \cf0 \
+Here are some examples of querying sam to get file information\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\fs24 \cf0  \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\fs20 \cf0 \
+ \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6 \cf0 $ samweb get-metadata np04_raw_run005141_0015_dl10_reco_12736632_0_20181028T182951.root \'96json\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0 \cf0  \
+\{\
+ "file_name": "np04_raw_run005141_0015_dl10_reco_12736632_0_20181028T182951.root", \
+ "file_id": 7352771, \
+ "create_date": "2018-10-29T14:59:42+00:00", \
+ "user": "dunepro", \
+ "update_date": "2018-11-28T17:07:30+00:00", \
+ "update_user": "schellma",\
+ "file_size": 14264091111, \
+ "checksum": [\
+  "enstore:1390300706", \
+  "adler32:e8bf4e23"\
+ ], \
+ "content_status": "good", \
+ "file_type": "detector", \
+ "file_format": "artroot", \
+ "data_tier": "full-reconstructed", \
+ "application": \{\
+  "family": "art", \
+  "name": "reco", \
+  "version": "v07_08_00_03"\
+ \}, \
+ "event_count": 108, \
+ "first_event": 21391, \
+ "last_event": 22802, \
+ "start_time": "2018-10-28T17:34:58+00:00", \
+ "end_time": "2018-10-29T14:55:42+00:00", \
+ "data_stream": "physics", \
+ "beam.momentum": 7.0, \
+ "data_quality.online_good_run_list": 1, \
+ "detector.hv_value": 180, \
+ "DUNE_data.acCouple": 0, \
+ "DUNE_data.calibpulsemode": 0, \
+ "DUNE_data.DAQConfigName": "np04_WibsReal_Ssps_BeamTrig_00021", \
+ "DUNE_data.detector_config": "cob2_rce01:cob2_rce02:cob2.. 4 more lines of text", \
+ "DUNE_data.febaselineHigh": 2, \
+ "DUNE_data.fegain": 2, \
+ "DUNE_data.feleak10x": 0, \
+ "DUNE_data.feleakHigh": 1, \
+ "DUNE_data.feshapingtime": 2, \
+ "DUNE_data.inconsistent_hw_config": 0, \
+ "DUNE_data.is_fake_data": 0, \
+ "runs": [\
+  [\
+   5141, \
+   1, \
+   "protodune-sp"\
+  ]\
+ ], \
+ "parents": [\
+  \{\
+   "file_name": "np04_raw_run005141_0015_dl10.root", \
+   "file_id": 6607417\
+  \}\
+ ]\
+\}\
+ \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6 \cf0 $ samweb get-file-access-url np04_raw_run005141_0015_dl10_reco_12736632_0_20181028T182951.root\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\fs24 \cf0  \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\fs20 \cf0 gsiftp://eospublicftp.cern.ch/eos/experiment/neutplatform/protodune/rawdata/np04/output/detector/full-reconstructed/07/35/27/71/np04_raw_run005141_0015_dl10_reco_12736632_0_20181028T182951.root\
+gsiftp://fndca1.fnal.gov:2811/pnfs/fnal.gov/usr/dune/tape_backed/dunepro/protodune/np04/beam/output/detector/full-reconstructed/07/35/27/71/np04_raw_run005141_0015_dl10_reco_12736632_0_20181028T182951.root\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\fs24 \cf0  \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6\fs20 \cf0 $ samweb file-lineage children np04_raw_run005141_0015_dl10.root \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0 \cf0  \
+np04_raw_run005141_0015_dl10_reco_12736632_0_20181028T182951.root\
+ \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6 \cf0 $ samweb file-lineage parents\\\
+np04_raw_run005141_0015_dl10_reco_12736632_0_20181028T182951.root\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0 \cf0  \
+np04_raw_run005141_0015_dl10.root
+\fs24 \
+\pard\pardeftab720\ri0\sl276\slmult1\sb360\sa80\partightenfactor0
+
+\f1\b\fs34 \cf0  \
+Merging and splitting (for experts)\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\b0\fs24 \cf0  \
+Parentage works pretty well if one is merging files but splitting them can become problematic as it makes the parentage structure pretty complex.\
+\pard\pardeftab720\ri0\sl276\slmult1\sb280\partightenfactor0
+\cf0 Sam will let you merge files with different attributes if you don\'92t check carefully. Generally, it is a good idea not to merge files from different data tiers and certainly not from different data_types. Merging across major processing version\cf2 s should also be avoided
+\fs20 .\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\fs26 \cf4  \
+\pard\pardeftab720\ri0\sl276\slmult1\sb360\sa80\partightenfactor0
+
+\f1\b\fs34 \cf2 Example: Execute samweb Commands\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\b0\fs24 \cf0  \
+There is documentation at \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://cdcvs.fnal.gov/redmine/projects/sam/wiki/User_Guide_for_SAM#Listing-Files-using-a-Variable-to-Build-the-Query"}}{\fldrslt \cf3 \ul https://cdcvs.fnal.gov/redmine/projects/sam/wiki/User_Guide_for_SAM}}\cf3 \ul \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\cf0 \ulnone  \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://cdcvs.fnal.gov/redmine/projects/sam-main/wiki/Updated_dimensions_syntax"}}{\fldrslt \cf3 \ul https://cdcvs.fnal.gov/redmine/projects/sam-main/wiki/Updated_dimensions_syntax}}\cf3 \ul \
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+\cf0 \ulnone This exercise will start you accessing data files that have been defined to the DUNE Data Catalog. Execute the following commands after logging in to the DUNE interactive node, creating the directories above - \
+Once per session\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6\fs22 \cf0 setup sam_web_client #(or set up your standalone version)\
+export SAM_EXPERIMENT=dune\
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\f0\fs24 \cf0 Then if curious about a file: \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6\fs22 \cf0 samweb locate-file np04_raw_run005141_0001_dl7.root\
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\f0\fs24 \cf0 this will give you output that looks like \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\fs22 \cf0  rucio:protodune-sp\
+enstore:/pnfs/dune/tape_backed/dunepro/protodune/np04/beam/detector/None/raw/06/60/59/05(596@vr0072m8)\
+castor:/neutplatform/protodune/rawdata/np04/detector/None/raw/06/60/59/05\
+cern-eos:/eos/experiment/neutplatform/protodune/rawdata/np04/detector/None/raw/06/60/59/05\
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\fs24 \cf0 which are the locations of the file on disk and tape. We can use this to copy the file from tape to our local disk. \
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\f1\b \cf0 Better yet, you can use xrootd to access the file without copying it if it is staged to disk.
+\f0\b0 \
+Find the xrootd uri via \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\fs22 \cf0  
+\f6 samweb get-file-access-url np04_raw_run005141_0001_dl7.root --schema=root\
+
+\f0  \
+root://fndca1.fnal.gov:1094/pnfs/fnal.gov/usr/dune/tape_backed/dunepro/protodune/np04/beam/detector/None/raw/06/60/59/05 /np04_raw_run005141_0001_dl7.root\
+root://castorpublic.cern.ch//castor/cern.ch/neutplatform/protodune/rawdata/np04/detector/None/raw/06/60/59/05/np04_raw_run005141_0001_dl7.root\
+root://eospublic.cern.ch//eos/experiment/neutplatform/protodune/rawdata/np04/detector/None/raw/06/60/59/05/np04_raw_run005141_0001_dl7.root\
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\fs24 \cf0 You can localize your file with the --location argument (enstore, castor, cern-eos) \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6\fs22 \cf0 samweb get-file-access-url np04_raw_run005141_0001_dl7.root --schema=root --location=enstore\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0 \cf0  \
+root://fndca1.fnal.gov:1094/pnfs/fnal.gov/usr/dune/tape_backed/dunepro/protodune/np04/beam/detector/None/raw/06/60/59/05 /np04_raw_run005141_0001_dl7.root\
+ \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6 \cf0 samweb get-file-access-url np04_raw_run005141_0001_dl7.root --schema=root --location=cern-eos\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0 \cf0  \
+root://eospublic.cern.ch//eos/experiment/neutplatform/protodune/rawdata/np04/detector/None/raw/06/60/59/05/np04_raw_run005141_0001_dl7.root 
+\fs24 \
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+\cf0 To get SAM metadata for a file for which you know the name: \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6\fs22 \cf0 samweb  get-metadata np04_raw_run005141_0001_dl7.root \
+# add the --json option to get output in json format\
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\f0\fs24 \cf0 To list raw data files for a given run: \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6\fs22 \cf0 samweb list-files "run_number 5141 and run_type protodune-sp and data_tier raw"\
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\f0\fs24 \cf0 What about a reconstructed version? 
+\fs22  
+\f6 \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\cf0 samweb list-files "run_number 5141 and run_type protodune-sp and data_tier full-reconstructed and version (v07_08_00_03,v07_08_00_04)"\
+ \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0 \cf0 Gives a list of files  from the first production like \
+ \
+\'85.\
+np04_raw_run005141_0001_dl7_reco_12736115_0_20181028T165152.root\
+\'85.\
+\
+We also group reconstruction versions into Campaigns like PDSPProf4\
+\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6 \cf0 samweb list-files "run_number 5141 and run_type protodune-sp and data_tier full-reconstructed and DUNE.campaign PDSPProd4"\
+\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0 \cf0 Gives more recent files like:\
+\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\fs20 \cf0 np04_raw_run005141_0009_dl1_reco1_18126423_0_20210318T102429Z.root
+\fs22 \
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\fs24 \cf0 samweb allows you to select on a lot of parameters \
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://wiki.dunescience.org/wiki/Useful_ProtoDUNE_samweb_parameters"}}{\fldrslt \cf3 \ul Useful ProtoDUNE samweb parameters}}\cf3 \ul \
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://dune-data.fnal.gov/"}}{\fldrslt \cf3 https://dune-data.fnal.gov}}\cf0 \ulnone  and {\field{\*\fldinst{HYPERLINK "https://wiki.dunescience.org/wiki/ProtoDUNE-SP_datasets"}}{\fldrslt 
+\fs22 \cf3 https://wiki.dunescience.org/wiki/ProtoDUNE-SP_datasets}}\
+ lists some official dataset definitions \
+\pard\pardeftab720\ri0\sl276\slmult1\sb280\sa80\partightenfactor0
+
+\f1\b\fs26 \cf0 You can make your own samweb dataset definitions\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\b0\fs22 \cf0 First, make certain a definition does not already exist that satisfies your needs by checking the official pages above. \
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\fs24 \cf0 First check to see what you will get \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6\fs22 \cf0 samweb list-files "data_tier full-reconstructed and DUNE.campaign PDSPProd4  and data_stream cosmics and run_type protodune-sp and detector.hv_value 180" \'96summary\
+ \
+samweb create-definition $USER-PDSPProd4_good_cosmics "data_tier full-reconstructed and DUNE.campaign PDSPProd4  and data_stream cosmics and run_type protodune-sp and detector.hv_value 180"\
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\f0\fs24 \cf0 Note that the username appears in the definition name - to prevent users from getting confused with official samples, your user name is required in the definition name. \
+\pard\pardeftab720\ri0\sl276\slmult1\sb280\sa80\partightenfactor0
+
+\f1\b\fs26 \cf0 prestaging\
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf0 At CERN files are either on eos or castor. At FNAL they can be on tape_backed dcache which may mean they are on tape and may need to be prestaged to disk before access.\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6\fs22 \cf0 setup fife_utils  # a new version we requested\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0 \cf0 \
+# check to see if a file is on tape or disk\
+\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6\fs20 \cf0 sam_validate_dataset  --locality  --file np04_raw_run005141_0015_dl10.root --location=/pnfs/ --stage_status\
+         Staging status for: file np04_raw_run005141_0015_dl10.root\
+                Total Files: 1\
+              Tapes spanned: 1\
+      Percent files on disk: 0%\
+Percent bytes online DCache: 0%\
+locality counts:\
+ONLINE: 0\
+NEARLINE: 1\
+NEARLINE_size: 8276312581\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\fs22 \cf0 \
+Oops - this one is not on disk \
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\f0\fs24 \cf0 returns ONLINE_AND_NEARLINE: 1 if available on disk \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6\fs20 \cf0 sam_validate_dataset  --locality --name=schellma-1GeVMC-test --stage_status --location=/pnfs/\
+         Staging status for: defname:schellma-1GeVMC-test\
+                Total Files: 140\
+              Tapes spanned: 10\
+      Percent files on disk: 100%\
+Percent bytes online DCache: 100%\
+locality counts:\
+ONLINE: 0\
+ONLINE_AND_NEARLINE: 140\
+ONLINE_AND_NEARLINE_size: 270720752891\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\fs22 \cf0 \
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\f0\fs24 \cf0 No ONLINE_NEARLINE means you need to prestage that file. Unfortunately, prestaging requires a definition \
+Let's find some for run 5141.  Your physics group should already have some defined.\
+The official Protodune dataset definitions are at: \
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://wiki.dunescience.org/wiki/ProtoDUNE-SP_datasets"}}{\fldrslt 
+\fs22 \cf3 https://wiki.dunescience.org/wiki/ProtoDUNE-SP_datasets}}\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6\fs22 \cf0 \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\fs20 \cf0 samweb describe-definition 
+\f0 \cf5 PDSPProd4a_MC_1GeV_reco1_sce_datadriven_v1_00\
+\
+Is simulation for 10% of the total sample\
+
+\f6 \cf0 \
+Gives this description:\
+samweb describe-definition PDSPProd4a_MC_1GeV_reco1_sce_datadriven_v1_00\
+Definition Name: PDSPProd4a_MC_1GeV_reco1_sce_datadriven_v1_00\
+  Definition Id: 635109\
+  Creation Date: 2021-08-02T16:57:20+00:00\
+       Username: dunepro\
+          Group: dune\
+     Dimensions: run_type 'protodune-sp' and file_type mc and data_tier 'full-reconstructed' and dune.campaign PDSPProd4a and dune_mc.beam_energy 1 and\
+dune_mc.space_charge yes and dune_mc.generators beam_cosmics and version v09_17_01 and run_number in 18800650,.....\
+\
+samweb list-files "defname:PDSPProd4a_MC_1GeV_reco1_sce_datadriven_v1_00\
+> " --summary\
+File count:	5025\
+Total size:	9683195368818\
+Event count:	50250\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0 \cf0 \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6\fs22 \cf0 samweb prestage-dataset --def=
+\fs20 PDSPProd4a_MC_1GeV_reco1_sce_datadriven_v1_00 
+\fs22 --parallel=10\
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\f0\fs24 \cf0 would prestage all of the reconstructed data for run 5141 \
+you can check on the status by going to \
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://samweb.fnal.gov:8480/station_monitor/dune/stations/dune/projects"}}{\fldrslt \cf3 \ul http://samweb.fnal.gov:8480/station_monitor/dune/stations/dune/projects}} and scrolling down to see your prestage link. \
+At CERN\
+You can find local copies of files at CERN for interactive use. \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f6\fs20 \cf0 samweb list-file-locations --defname=runset-5141-raw-180kV-7GeV-v0 --schema=root --filter_path=castor \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0 \cf0 \
+gives you:\
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+\cf0 root://castorpublic.cern.ch//castor/cern.ch/neutplatform/protodune/rawdata/np04/detector/None/raw/06/60/74/16/np04_raw_run005141_0015_dl3.root	castor:/neutplatform/protodune/rawdata/np04/detector/None/raw/06/60/74/16	np04_raw_run005141_0015_dl3.root	8289321123\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\cf0 root://castorpublic.cern.ch//castor/cern.ch/neutplatform/protodune/rawdata/np04/detector/None/raw/06/60/74/17/np04_raw_run005141_0015_dl10.root	castor:/neutplatform/protodune/rawdata/np04/detector/None/raw/06/60/74/17	np04_raw_run005141_0015_dl10.root	8276312581\
+\pard\pardeftab720\ri0\sl276\slmult1\sb240\sa240\partightenfactor0
+
+\fs24 \cf0 \
+\
+\
+\
+}
