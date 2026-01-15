@@ -1,9 +1,11 @@
 .. _glossary:
 
-Glossary
---------
+Glossary of Metadata Keys
+-------------------------
 
-Incomplete list of keys used 
+List of commonly used metadata keys in the DUNE Data Catalog
+
+You can find a config file which lists valid values for required keys [here](https://github.com/DUNE/merge-utils/blob/main/config/defaults/metadata.yaml):
 
 **Keys must be lower case**  values can be either.
 

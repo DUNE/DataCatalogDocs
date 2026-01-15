@@ -24,11 +24,10 @@ Contents
 
 .. toctree::
 
-    Intro
+    glossary
     OfficialDataCatalog
     setup
     MetacatQueryExamples
-    glossary
     template_input
     reco
     mcreco

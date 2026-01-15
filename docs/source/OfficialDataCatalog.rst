@@ -1,5 +1,5 @@
-The official DUNE data catalog supported by the production team
-===============================================================
+Official DUNE data datasets  
+===========================
 
 `Data catalog documentation <https://hschellman.github.io/computing-basics/OfficialDatasets>`_ is maintained in the `computing basics tutorial <https://hschellman.github.io/computing-basics>`_.
 
