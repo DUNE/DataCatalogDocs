@@ -1,0 +1,44 @@
+checksums:
+    adler32   : b2366f17
+created_timestamp   :	2024-02-23 01:21:37.045070+00:00
+creator             :	dunepro
+fid                 :	00cpILTmQT2k28y9
+name                :	nu_numu2nue_nue2nutau_dunevd10kt_1x8x6_3view_30deg_1003_149_20230809T224150Z_gen_g4_detsim_hitreco__20240223T010852Z_reco2.root
+namespace           :	fardet-vd
+retired             :	False
+retired_by          :	None
+retired_timestamp   :	None
+size                :	1040757064
+updated_by          :	schellma
+updated_timestamp   :	1709427495.124007
+metadata:
+    art.file_format_era : ART_2011a
+    art.file_format_version: 15
+    art.first_event     : 14901
+    art.last_event      : 15000
+    art.process_name    : Reco2
+    core.application    : art.reco2
+    core.application.family: art
+    core.application.name: reco2
+    core.application.version: v09_81_00d02
+    core.data_stream    : out1
+    core.data_tier      : full-reconstructed
+    core.end_time       : 1708669090
+    core.event_count    : 100
+    core.file_format    : artroot
+    core.file_type      : mc
+    core.first_event_number: 14901
+    core.group          : dune
+    core.last_event_number: 15000
+    core.parents        : [{'file_name': 'fardet-vd:nu_numu2nue_nue2nutau_dunevd10kt_1x8x6_3view_30deg_1003_149_20230809T224150Z_gen_g4_detsim_hitreco.root'}]
+    core.run_type       : fardet-vd
+    core.runs           : [1003]
+    core.runs_subruns   : [100300001]
+    core.start_time     : 1708668624
+    dune.campaign       : fd_mc_2023a_reco2
+    dune.config_file    : reco2_dunevd10kt_nu_1x8x6_3view_30deg_geov3.fcl
+    dune.output_status  : confirmed
+    dune.requestid      : ritm1780305
+    dune.workflow       : {'user': 'benjamin@fnal.gov', 'job_id': '170270.75@justin-prod-sched01.dune.hep.ac.uk', 'cpuinfo': 'AMD EPYC 7502 32-Core Processor', 'hostname': 'dunegli-1353348-0-fnpc19102.fnal.gov', 'stage_id': 1, 'site_name': 'US_FNAL-FermiGrid', 'os_release': 'Scientific Linux release 7.9 (Nitrogen)', 'workflow_id': 1617, 'jobscript_start': 1708650525, 'jobscript_finish': 1708651118, 'jobscript_cpu_seconds': 334, 'jobscript_real_seconds': 592}
+    dune_mc.detector_type: fardet-vd
+    dune_mc.gen_fcl_filename: prodgenie_nu_numu2nue_nue2nutau_dunevd10kt_1x8x6_3view_30deg.fcl

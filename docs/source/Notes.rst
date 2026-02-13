@@ -5,7 +5,7 @@ This was my first sphinx project.
 
 I started with the https://www.sphinx-doc.org/en/master/tutorial/getting-started.html tutorial so I have a similar structure.
 
-I used the napoleon theme that Igor Mandrichenko used from https://metacat.readthedocs.io/en/latest/
+I used the napoleon theme that Igor Mandrichenko used from https://fermitools.github.io/metacat/en/latest/
 
 rst format
 **********

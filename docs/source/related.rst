@@ -4,7 +4,7 @@ Related documentation
 metacat
 -------
 
-  `metacat documentation <https://metacat.readthedocs.io/en/latest/>`_
+  `metacat documentation <https://fermitools.github.io/metacat/en/latest/>`_
 
   `metacat gui <https://metacat.fnal.gov:9443/dune_meta_prod/app/gui/query>`_
 
@@ -28,4 +28,4 @@ samweb
 JustIn
 ------
 
-  `JustIn documentation <https://justin.dune.hep.ac.uk/docs/>`_
+  `JustIn documentation <https://dunejustin.fnal.gov/docs/>`_

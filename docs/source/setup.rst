@@ -8,7 +8,7 @@ Get metacat started
 
 First find the documentation:
 
-https://metacat.readthedocs.io/en/latest/index.html
+https://fermitools.github.io/metacat
 
 metacat is a `ups` (SL7) and `spack` (AL9) product so you can get it by
 
@@ -26,7 +26,7 @@ or (AL9)
   
 but you can also do a local install using:
 
-https://metacat.readthedocs.io/en/latest/ui.html#installation
+https://fermitools.github.io/metacat/en/latest/ui.html#installation
 
 Make certain you can point to the metacat server:
 
@@ -45,6 +45,6 @@ Then authenticate to metacat using your FNAL username and services password:
   User:    schellma
   Expires: Thu Oct 13 16:27:29 2022
 
-See the `metacat documentation <https://metacat.readthedocs.io/en/latest/ui.html#user-authentication>`_ for other authentication methods such as tokens.
+See the `metacat documentation <https://fermitools.github.io/metacat/en/latest/ui.html#user-authentication>`_ for other authentication methods such as tokens.
 
 
