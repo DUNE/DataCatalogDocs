@@ -5,13 +5,12 @@ This was my first sphinx project.
 
 I started with the https://www.sphinx-doc.org/en/master/tutorial/getting-started.html tutorial so I have a similar structure.
 
-I used the napoleon theme that Igor Mandrichenko used from https://fermitools.github.io/metacat/en/latest/
+I used the napoleon theme that Igor Mandrichenko used from https://fermitools.github.io/metacat
 
 rst format
 **********
 
-https://docutils.sourceforge.io/docs/user/rst/quickstart.html
-
+https://docutils.sourceforge.io/
 Not my favorite -
 
   - the need to keep track of indentation and blank lines with poor error messages is painful

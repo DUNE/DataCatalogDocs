@@ -12,7 +12,7 @@ First find the documentation:
 
 https://fermitools.github.io/metacat
 
-metacat is a `ups` product so you can get it by
+metacat is a `ups` product so on SL7 you can get it by
 
 .. code-block:: bash
 
@@ -20,9 +20,9 @@ metacat is a `ups` product so you can get it by
   setup python v3_9_2  # this avoids system python which may be very old
   setup metacat
 
-but you can also do a local install using:
+but you can also do a local install using the instructions at:
 
-https://fermitools.github.io/metacat/en/latest/ui.html#installation
+https://fermitools.github.io/metacat/
 
 Make certain you can point to the metacat server:
 

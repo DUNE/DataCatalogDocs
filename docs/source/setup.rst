@@ -24,9 +24,9 @@ or (AL9)
 
   spack load metacat
   
-but you can also do a local install using:
+but you can also do a local install using the instructions at:
 
-https://fermitools.github.io/metacat/en/latest/ui.html#installation
+https://fermitools.github.io/metacat
 
 Make certain you can point to the metacat server:
 
@@ -45,6 +45,5 @@ Then authenticate to metacat using your FNAL username and services password:
   User:    schellma
   Expires: Thu Oct 13 16:27:29 2022
 
-See the `metacat documentation <https://fermitools.github.io/metacat/en/latest/ui.html#user-authentication>`_ for other authentication methods such as tokens.
 
 
