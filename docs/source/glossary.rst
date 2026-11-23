@@ -5,9 +5,22 @@ Glossary of Metadata Keys
 
 List of commonly used metadata keys in the DUNE Data Catalog
 
+For a complete list see the `MetaCatch`_ documentation.  
+In particular the `list of valid keys`_ and suggested values.
+
+.. _MetaCatch: https://github.com/DUNE/MetaCatch/blob/main/README.md
+
+.. _list of valid keys: https://github.com/DUNE/MetaCatch/blob/main/src/metacatch/config/specification.yaml
+
 You can find a config file which lists valid values for required keys [here](https://github.com/DUNE/merge-utils/blob/main/config/defaults/metadata.yaml):
 
 **Keys must be lower case**  values can be either.
+
+Keys have the form `<category>.<subcategory>.<parameter>`
+
+`core`, `dune` and `dune_mc` are special categories that contains many required terms. 
+
+**Do not make your own categories!!!!**
 
 Minimal terms for raw and processed data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
