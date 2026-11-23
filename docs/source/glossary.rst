@@ -52,7 +52,7 @@ generally required
 :core.file_content_status: status of the file - default is "good"
 :core.file_format: format of the data (hdf5, root)
 :core.file_type: flag to tell mc from data, (detector or mc)
-:core.run_type: which detector took the data "protodune-sp, hd-fardet ..."
+:core.run_type: which detector took the data "protodune-sp, fardet-hd ..."
 :core.runs: [list of runs]
 :core.runs_subruns: [list of subruns in run*100000+subrun format]
 :retention.status: should be "active" flag to tell if the file is being used and should be retained
